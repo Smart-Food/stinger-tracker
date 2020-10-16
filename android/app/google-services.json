@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "855714604177",
+    "firebase_url": "https://stringer-84db2.firebaseio.com",
+    "project_id": "stringer-84db2",
+    "storage_bucket": "stringer-84db2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855714604177:android:09c4d1394f11e548db4b30",
+        "android_client_info": {
+          "package_name": "stinger.stinger_tracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "855714604177-tok60p691lgidns2fq36fv5hv0h10hrl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkNayoMXBr7pvKoXPhmG9UJ0nQTJv07-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "855714604177-tok60p691lgidns2fq36fv5hv0h10hrl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
