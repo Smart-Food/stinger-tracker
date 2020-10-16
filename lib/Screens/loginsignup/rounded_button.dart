@@ -5,12 +5,14 @@ class RoundedButton extends StatelessWidget {
   final String text;
   final Function press;
   final Color color, textColor;
+  final bool canLoginSignup;
   const RoundedButton({
     Key key,
     this.text,
     this.press,
     this.color = kPrimaryColor,
     this.textColor = Colors.white,
+    this.canLoginSignup
   }) : super(key: key);
 
   @override
