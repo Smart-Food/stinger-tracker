@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: DropdownScreen(), //DropdownScreen LoginSignupScreen
+      home: DropdownScreen(Storage()), //DropdownScreen LoginSignupScreen
     );
   }
 }
