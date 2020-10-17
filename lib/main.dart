@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MasterDropdownScreen(Storage('list.csv')), //DropdownScreen LoginSignupScreen
+      home: LoginSignupScreen(),//MasterDropdownScreen(Storage('list.csv')), //DropdownScreen LoginSignupScreen
     );
   }
 }

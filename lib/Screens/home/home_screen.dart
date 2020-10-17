@@ -5,8 +5,12 @@ import 'package:stinger_tracker/constants.dart';
 import 'package:stinger_tracker/components/search_box.dart';
 import 'package:stinger_tracker/fade_animation.dart';
 import 'package:stinger_tracker/models/product.dart';
+import '../../csv_operations.dart';
 import 'product_card.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:stinger_tracker/form.dart';
+import 'package:stinger_tracker/masterform.dart';
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({
@@ -131,7 +135,17 @@ class _HomeScreenScreenState extends State<HomeScreen> {
                 ),
               ],
             )
-        )
+        ),
+     floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        backgroundColor: widget.isDayMood ? lightBgColors[1] : darkBgColors[1],
+        onPressed: (){
+          Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => widget.isDayMood ? DropdownScreen(Storage('list.csv')) : MasterDropdownScreen(Storage('tasks.csv')) ),
+              );
+        },
+     ),   
     );
   }
 
