@@ -23,15 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a88ed0a-f687-4acb-9c2f-0f04e704d211" name="Default Changelist" comment="ДАВАЙ! УРРА! ДАВАЙ! ДАВАЙ!">
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Screens/home/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/home/home_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Screens/loginsignup/loginsignup_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/loginsignup/loginsignup_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Screens/loginsignup/tabs.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/loginsignup/tabs.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/backend/user_global.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/backend/user_global.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/masterform.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/masterform.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,28 +140,28 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1199" y="406" width="424" height="478" key="FileChooserDialogImpl/0.0.2560.1040@0.0.2560.1040" timestamp="1602963949237" />
-    <state width="1237" height="276" key="GridCell.Tab.0.bottom" timestamp="1602965011647">
+    <state width="1237" height="276" key="GridCell.Tab.0.bottom" timestamp="1602974354566">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1237" height="276" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1602965011647" />
+    <state width="1237" height="276" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1602974354566" />
     <state width="1398" height="205" key="GridCell.Tab.0.bottom/0.23.1440.808@0.23.1440.808" timestamp="1602865361846" />
     <state width="1398" height="205" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1602865205953" />
-    <state width="1237" height="276" key="GridCell.Tab.0.center" timestamp="1602965011646">
+    <state width="1237" height="276" key="GridCell.Tab.0.center" timestamp="1602974354565">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1237" height="276" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1602965011646" />
+    <state width="1237" height="276" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1602974354565" />
     <state width="1398" height="205" key="GridCell.Tab.0.center/0.23.1440.808@0.23.1440.808" timestamp="1602865361845" />
     <state width="1398" height="205" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1602865205951" />
-    <state width="1237" height="276" key="GridCell.Tab.0.left" timestamp="1602965011646">
+    <state width="1237" height="276" key="GridCell.Tab.0.left" timestamp="1602974354565">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1237" height="276" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1602965011646" />
+    <state width="1237" height="276" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1602974354565" />
     <state width="1398" height="205" key="GridCell.Tab.0.left/0.23.1440.808@0.23.1440.808" timestamp="1602865361845" />
     <state width="1398" height="205" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1602865205947" />
-    <state width="1237" height="276" key="GridCell.Tab.0.right" timestamp="1602965011646">
+    <state width="1237" height="276" key="GridCell.Tab.0.right" timestamp="1602974354566">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1237" height="276" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1602965011646" />
+    <state width="1237" height="276" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1602974354566" />
     <state width="1398" height="205" key="GridCell.Tab.0.right/0.23.1440.808@0.23.1440.808" timestamp="1602865361845" />
     <state width="1398" height="205" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1602865205952" />
     <state x="437" y="200" key="IDE.errors.dialog" timestamp="1602950060006">
