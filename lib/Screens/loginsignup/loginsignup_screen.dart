@@ -38,7 +38,7 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
 
   bool isFullSun = false, isDayMood = true,
       isChangeLoginSignup = false, isSignup = true,
-      canLoginSignup = false;
+      canLoginSignup = false, isDispose = false;
 
   @override
   void initState() {
@@ -88,12 +88,14 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
           UserLocal.saveUserLoggedInSharedPreference(true);
           UserLocal.saveUserIndexSharedPreference(myIndex);
           FocusScope.of(context).requestFocus(new FocusNode());
-          Navigator.of(context).pop();
-          Navigator.of(context).push(MaterialPageRoute(builder: (context) => HomeScreen(
-              myName: drivers.docs[index].data()["myName"],
-              myIndex: myIndex
-          )
-          ));
+          Navigator.of(context).pushReplacement(
+              PageRouteBuilder(pageBuilder: (context, animation1, animation2) => HomeScreen(
+                myName: drivers.docs[index].data()["myName"],
+                myIndex: myIndex,
+                isDayMood: isDayMood,
+                isFullSun: isFullSun,
+              )
+              ));
         }
       }
     });
@@ -108,19 +110,21 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
         int myIndex = 0;
         for (int index = 0; index < drivers.docs.length; index++) {
           if (nameSignupEditingController.text == drivers.docs[index].data()["myName"]) {
-            print("Да");
             myIndex = index;
             UserLocal.saveUserLoggedInSharedPreference(true);
             UserLocal.saveUserIndexSharedPreference(myIndex);
             FocusScope.of(context).requestFocus(new FocusNode());
-            Navigator.of(context).pop();
-            Navigator.of(context).push(MaterialPageRoute(builder: (context) => HomeScreen(
-                myName: nameSignupEditingController.text,
-                myIndex: myIndex
-            )
-            ));
+            Navigator.of(context).pushReplacement(
+                PageRouteBuilder(pageBuilder: (context, animation1, animation2) => HomeScreen(
+                  myName: nameSignupEditingController.text,
+                  myIndex: myIndex,
+                  isDayMood: isDayMood,
+                  isFullSun: isFullSun,
+                )
+                )
+            );
           }
-        }
+      }
       });
     });
   }
@@ -137,15 +141,15 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
           canLoginSignup = false;
         });
     else
-      if (nameLoginEditingController.text != ""
-          && passwordLoginEditingController.text != "")
-        setState(() {
-          canLoginSignup = true;
-        });
-      else
-        setState(() {
-          canLoginSignup = false;
-        });
+    if (nameLoginEditingController.text != ""
+        && passwordLoginEditingController.text != "")
+      setState(() {
+        canLoginSignup = true;
+      });
+    else
+      setState(() {
+        canLoginSignup = false;
+      });
   }
 
   @override
@@ -190,76 +194,76 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                             children: [
                               VerticalSpacing(of: 50),
                               FadeAnimation(
-                                0,
-                                Tabs(
-                                  press: (value) {
-                                    changeMood(value);
-                                  },
-                                ),
+                                  0,
+                                  Tabs(
+                                    press: (value) {
+                                      changeMood(value);
+                                    },
+                                  ),
                               ),
                               VerticalSpacing(),
                               FadeAnimation(
-                                0.1,
-                                Text(
-                                  isDayMood
-                                      ? "Доброе утро"
-                                      : "Добрый вечер",
-                                  style: Theme.of(context).textTheme.headline3.copyWith(
-                                      fontWeight: FontWeight.bold, color: Colors.white),
-                                ),
+                                  0.1,
+                                  Text(
+                                    isDayMood
+                                        ? "Доброе утро"
+                                        : "Добрый вечер",
+                                    style: Theme.of(context).textTheme.headline3.copyWith(
+                                        fontWeight: FontWeight.bold, color: Colors.white),
+                                  ),
                               ),
                               VerticalSpacing(of: 10),
                               FadeAnimation(
-                                0.2,
-                                Text(
-                                  isSignup
-                                      ? "Зарегистрируйтесь в нашем приложении"
-                                      : "Войдите в свой аккаунт",
-                                  style: TextStyle(color: Colors.white),
-                                ),
+                                  0.2,
+                                  Text(
+                                    isSignup
+                                        ? "Зарегистрируйтесь в нашем приложении"
+                                        : "Войдите в свой аккаунт",
+                                    style: TextStyle(color: Colors.white),
+                                  ),
                               ),
                               VerticalSpacing(of: 50),
                               FadeAnimation(
-                                0.3,
-                                RoundedTextField(
-                                  hintText: "Имя пользователя",
-                                  valueChanged: (value) => inputListener(),
-                                  textEditingController: isSignup
-                                      ? nameSignupEditingController
-                                      : nameLoginEditingController,
-                                  isPassword: false,
-                                ),
+                                  0.3,
+                                  RoundedTextField(
+                                    hintText: "Имя пользователя",
+                                    valueChanged: (value) => inputListener(),
+                                    textEditingController: isSignup
+                                        ? nameSignupEditingController
+                                        : nameLoginEditingController,
+                                    isPassword: false,
+                                  ),
                               ),
                               VerticalSpacing(),
                               FadeAnimation(
-                                0.3,
-                                RoundedTextField(
-                                    hintText: "Пароль",
-                                    valueChanged: (value) => inputListener(),
-                                    textEditingController: isSignup
-                                        ? passwordSignupEditingController
-                                        : passwordLoginEditingController,
-                                    isPassword: true
-                                ),
+                                  0.3,
+                                  RoundedTextField(
+                                      hintText: "Пароль",
+                                      valueChanged: (value) => inputListener(),
+                                      textEditingController: isSignup
+                                          ? passwordSignupEditingController
+                                          : passwordLoginEditingController,
+                                      isPassword: true
+                                  ),
                               ),
                               VerticalSpacing(of: 10),
                               Center(
                                 child: FadeAnimation(
-                                  0.4,
-                                  Opacity(
-                                    opacity: canLoginSignup ? 1.0 : 0.5,
-                                    child: RoundedButton(
-                                      text: isSignup
-                                          ? "ЗАРЕГИСТРИРОВАТЬСЯ"
-                                          : "ВОЙТИ",
-                                      press: () {
-                                        if (canLoginSignup)
-                                          if (isSignup)
-                                            signup();
-                                          else login();
-                                      },
+                                    0.4,
+                                    Opacity(
+                                      opacity: canLoginSignup ? 1.0 : 0.5,
+                                      child: RoundedButton(
+                                        text: isSignup
+                                            ? "ЗАРЕГИСТРИРОВАТЬСЯ"
+                                            : "ВОЙТИ",
+                                        press: () {
+                                          if (canLoginSignup)
+                                            if (isSignup)
+                                              signup();
+                                            else login();
+                                        },
+                                      ),
                                     ),
-                                  )
                                 ),
                               ),
                               FadeAnimation(
@@ -284,7 +288,7 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                                           )
                                       )
                                     ],
-                                  )
+                                  ),
                               ),
                             ],
                           ),

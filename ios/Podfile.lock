@@ -336,6 +336,8 @@ PODS:
   - PromisesObjC (1.2.10)
   - shared_preferences (0.0.1):
     - Flutter
+  - speech_recognition (0.3.0):
+    - Flutter
 
 DEPENDENCIES:
   - cloud_firestore (from `.symlinks/plugins/cloud_firestore/ios`)
@@ -343,6 +345,7 @@ DEPENDENCIES:
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
   - Flutter (from `Flutter`)
   - shared_preferences (from `.symlinks/plugins/shared_preferences/ios`)
+  - speech_recognition (from `.symlinks/plugins/speech_recognition/ios`)
 
 SPEC REPOS:
   trunk:
@@ -374,6 +377,8 @@ EXTERNAL SOURCES:
     :path: Flutter
   shared_preferences:
     :path: ".symlinks/plugins/shared_preferences/ios"
+  speech_recognition:
+    :path: ".symlinks/plugins/speech_recognition/ios"
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
@@ -398,6 +403,7 @@ SPEC CHECKSUMS:
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
   shared_preferences: af6bfa751691cdc24be3045c43ec037377ada40d
+  speech_recognition: b5319aace06c3633c0547de44899f6e0bf8b2168
 
 PODFILE CHECKSUM: 9a8d6132d32aa685906dac95dbd1a98da88d57a0
 
