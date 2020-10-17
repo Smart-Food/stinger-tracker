@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'camera/camera_screen.dart';
 import 'constants.dart';
 import 'fade_animation.dart';
-
+import 'package:stinger_tracker/csv_operations.dart';
 class Item {
   String name;
   String object;
@@ -18,6 +18,8 @@ class Item {
 
 
 class DropdownScreen extends StatefulWidget {
+  final Storage storage;
+  DropdownScreen(this.storage) : super();
   State createState() => DropdownScreenState();
 }
 
@@ -219,6 +221,19 @@ class DropdownScreenState extends State<DropdownScreen> {
             FlatButton(
               child: Text('Сохранить данные и сделать снимок'),
                 onPressed: () {
+                  List<List> inspection = [
+                    [users[index].name, selectedUser.damage[0]]
+                  ];
+                  String csv = const ListToCsvConverter(textDelimiter: '|').convert(inspection);
+                  //print(csv);
+                  widget.storage.writeData(csv);
+                  widget.storage.readData().then((contents) {
+                    setState(() {
+                      fileContents = contents;
+                    });
+                    print(contents);
+                  });
+                  widget.storage.localPath.then((s){print(s);});
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => CameraScreen()),
