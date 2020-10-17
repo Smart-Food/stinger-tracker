@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:csv/csv.dart';
 import 'package:flutter/material.dart';
 import 'camera/camera_screen.dart';
 import 'constants.dart';
@@ -222,15 +223,12 @@ class DropdownScreenState extends State<DropdownScreen> {
               child: Text('Сохранить данные и сделать снимок'),
                 onPressed: () {
                   List<List> inspection = [
-                    [users[index].name, selectedUser.damage[0]]
+                    [users[0].name, users[0].damage[0]]
                   ];
                   String csv = const ListToCsvConverter(textDelimiter: '|').convert(inspection);
                   //print(csv);
                   widget.storage.writeData(csv);
                   widget.storage.readData().then((contents) {
-                    setState(() {
-                      fileContents = contents;
-                    });
                     print(contents);
                   });
                   widget.storage.localPath.then((s){print(s);});
