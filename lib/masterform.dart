@@ -1,3 +1,4 @@
+import 'dart:ffi';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -7,6 +8,8 @@ import 'constants.dart';
 import 'fade_animation.dart';
 import 'package:stinger_tracker/csv_operations.dart';
 import 'package:csv/csv.dart';
+import 'dart:async';
+
 class Item {
   String name;
   String object;
@@ -38,6 +41,7 @@ class MasterDropdownScreenState extends State<MasterDropdownScreen> {
   Widget build(BuildContext context) {
     PageController pageController = PageController(initialPage: 0);
     Size size = MediaQuery.of(context).size;
+    
 
       return Scaffold(
         // appBar: AppBar(
