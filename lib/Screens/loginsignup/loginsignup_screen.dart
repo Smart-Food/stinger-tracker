@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:stinger_tracker/Screens/home/home_screen.dart';
 import 'package:stinger_tracker/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:stinger_tracker/backend/user_global.dart';
 import 'package:stinger_tracker/backend/user_local.dart';
 
-import 'package:stinger_tracker/screens/home/home_screen.dart';
 
 class LoginSignupScreen extends StatefulWidget {
 
