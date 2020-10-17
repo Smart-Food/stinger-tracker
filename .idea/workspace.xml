@@ -3,50 +3,34 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3a88ed0a-f687-4acb-9c2f-0f04e704d211" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/icons/Sun.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/loginsignup.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/GoogleService-Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Screens/home/home_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Screens/loginsignup/land.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Screens/loginsignup/loginsignup_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Screens/loginsignup/rounded_button.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Screens/loginsignup/rounded_text_field.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Screens/loginsignup/sun.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Screens/loginsignup/tabs.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/backend/user_global.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/backend/user_local.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/fade_animation.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/size_config.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/template.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/stinger_tracker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/stinger_tracker.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Podfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Podfile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/AppDelegate.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Base.lproj/Main.storyboard" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Screens/Login/components/background.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Screens/Login/components/body.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Screens/Login/login_screen.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Screens/Signup/components/background.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Screens/Signup/components/body.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Screens/Signup/components/or_divider.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Screens/Signup/components/social_icon.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Screens/Signup/signup_screen.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Screens/Welcome/components/background.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Screens/Welcome/components/body.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Screens/Welcome/welcome_screen.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/already_have_an_account_acheck.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/rounded_button.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/rounded_input_field.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/rounded_password_field.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/text_field_container.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constants.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Screens/loginsignup/loginsignup_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/loginsignup/loginsignup_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/widget_test.dart" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +48,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ixyGlg78pbei2mofSib5YUpK2P" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -80,11 +67,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/ios/Runner" />
-      <recent name="$PROJECT_DIR$/lib/screens/login" />
-      <recent name="$PROJECT_DIR$/assets/images" />
-      <recent name="$PROJECT_DIR$/assets/icons" />
-      <recent name="$PROJECT_DIR$/assets" />
+      <recent name="$PROJECT_DIR$/android/app" />
     </key>
   </component>
   <component name="RunManager">
@@ -111,60 +94,73 @@
       <option name="project" value="LOCAL" />
       <updated>1602865492400</updated>
     </task>
-    <task id="LOCAL-00002" summary="БЫСТРО">
-      <created>1602867037829</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1602867037829</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ДАВАЙ! УРРА! ДАВАЙ! ДАВАЙ!" />
-    <MESSAGE value="БЫСТРО" />
-    <option name="LAST_COMMIT_MESSAGE" value="БЫСТРО" />
+    <option name="LAST_COMMIT_MESSAGE" value="ДАВАЙ! УРРА! ДАВАЙ! ДАВАЙ!" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="100" y="123" width="1240" height="599" key="AVDManager" timestamp="1602878328252">
+    <state x="1655" y="369" width="512" height="384" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602892758376">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1655" y="369" width="512" height="384" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1040@0.0.2560.1040" timestamp="1602892758376" />
+    <state x="1649" y="314" width="524" height="494" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602892662455">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1649" y="314" width="524" height="494" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1602892662455" />
+    <state x="100" y="123" width="1240" height="601" key="AVDManager" timestamp="1602864491892">
+      <screen x="0" y="23" width="1440" height="811" />
+    </state>
+    <state x="100" y="123" width="1240" height="601" key="AVDManager/0.23.1440.811@0.23.1440.811" timestamp="1602864491892" />
+    <state x="278" y="23" key="CommitChangelistDialog2" timestamp="1602865491967">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
-    <state x="100" y="123" width="1240" height="599" key="AVDManager/0.23.1440.808@0.23.1440.808" timestamp="1602878328252" />
-    <state x="100" y="123" width="1240" height="601" key="AVDManager/0.23.1440.811@0.23.1440.811" timestamp="1602864491892" />
-    <state x="278" y="23" key="CommitChangelistDialog2" timestamp="1602867037393">
-      <screen x="0" y="23" width="1440" height="811" />
-    </state>
     <state x="278" y="23" key="CommitChangelistDialog2/0.23.1440.808@0.23.1440.808" timestamp="1602865491967" />
-    <state x="278" y="23" key="CommitChangelistDialog2/0.23.1440.811@0.23.1440.811" timestamp="1602867037393" />
-    <state width="1398" height="170" key="GridCell.Tab.0.bottom" timestamp="1602891071188">
-      <screen x="0" y="23" width="1440" height="811" />
+    <state width="1358" height="264" key="GridCell.Tab.0.bottom" timestamp="1602893321489">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1398" height="170" key="GridCell.Tab.0.bottom/0.23.1440.808@0.23.1440.808" timestamp="1602886794213" />
-    <state width="1398" height="170" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1602891071188" />
-    <state width="1398" height="170" key="GridCell.Tab.0.center" timestamp="1602891071186">
-      <screen x="0" y="23" width="1440" height="811" />
+    <state width="1358" height="264" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1602893321489" />
+    <state width="1398" height="205" key="GridCell.Tab.0.bottom/0.23.1440.808@0.23.1440.808" timestamp="1602865361846" />
+    <state width="1398" height="205" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1602865205953" />
+    <state width="1358" height="264" key="GridCell.Tab.0.center" timestamp="1602893321488">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1398" height="170" key="GridCell.Tab.0.center/0.23.1440.808@0.23.1440.808" timestamp="1602886794212" />
-    <state width="1398" height="170" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1602891071186" />
-    <state width="1398" height="170" key="GridCell.Tab.0.left" timestamp="1602891071185">
-      <screen x="0" y="23" width="1440" height="811" />
+    <state width="1358" height="264" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1602893321488" />
+    <state width="1398" height="205" key="GridCell.Tab.0.center/0.23.1440.808@0.23.1440.808" timestamp="1602865361845" />
+    <state width="1398" height="205" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1602865205951" />
+    <state width="1358" height="264" key="GridCell.Tab.0.left" timestamp="1602893321488">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1398" height="170" key="GridCell.Tab.0.left/0.23.1440.808@0.23.1440.808" timestamp="1602886794210" />
-    <state width="1398" height="170" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1602891071185" />
-    <state width="1398" height="170" key="GridCell.Tab.0.right" timestamp="1602891071186">
-      <screen x="0" y="23" width="1440" height="811" />
+    <state width="1358" height="264" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1602893321488" />
+    <state width="1398" height="205" key="GridCell.Tab.0.left/0.23.1440.808@0.23.1440.808" timestamp="1602865361845" />
+    <state width="1398" height="205" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1602865205947" />
+    <state width="1358" height="264" key="GridCell.Tab.0.right" timestamp="1602893321489">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1398" height="170" key="GridCell.Tab.0.right/0.23.1440.808@0.23.1440.808" timestamp="1602886794212" />
-    <state width="1398" height="170" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1602891071186" />
-    <state x="320" y="164" key="Vcs.Push.Dialog.v2" timestamp="1602867044110">
-      <screen x="0" y="23" width="1440" height="811" />
+    <state width="1358" height="264" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1602893321489" />
+    <state width="1398" height="205" key="GridCell.Tab.0.right/0.23.1440.808@0.23.1440.808" timestamp="1602865361845" />
+    <state width="1398" height="205" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1602865205952" />
+    <state x="320" y="163" key="Vcs.Push.Dialog.v2" timestamp="1602865499920">
+      <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state x="320" y="163" key="Vcs.Push.Dialog.v2/0.23.1440.808@0.23.1440.808" timestamp="1602865499920" />
-    <state x="320" y="164" key="Vcs.Push.Dialog.v2/0.23.1440.811@0.23.1440.811" timestamp="1602867044110" />
-    <state x="503" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602871308300">
-      <screen x="0" y="23" width="1440" height="811" />
+    <state x="1579" y="283" width="672" height="678" key="search.everywhere.popup" timestamp="1602891873894">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="503" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.811@0.23.1440.811" timestamp="1602871308300" />
+    <state x="1579" y="283" width="672" height="678" key="search.everywhere.popup/0.0.2560.1040@0.0.2560.1040" timestamp="1602891873894" />
   </component>
 </project>
