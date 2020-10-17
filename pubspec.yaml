@@ -35,6 +35,9 @@ dependencies:
   shared_preferences: ^0.5.12
   speech_recognition: ^0.3.0+1
   speech_to_text: ^2.7.0
+  path_provider: ^1.6.21
+  camera: ^0.5.8+9
+  esys_flutter_share: ^1.0.2
 
 dev_dependencies:
   flutter_test:

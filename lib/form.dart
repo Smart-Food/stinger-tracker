@@ -1,5 +1,7 @@
-import 'package:flutter/material.dart';
+import 'dart:io';
 
+import 'package:flutter/material.dart';
+import 'camera/camera_screen.dart';
 import 'constants.dart';
 import 'fade_animation.dart';
 
@@ -20,6 +22,7 @@ class DropdownScreen extends StatefulWidget {
 }
 
 class DropdownScreenState extends State<DropdownScreen> {
+  File imageFile;
   List<Item> users = <Item>[
     Item(name: 'Линейный разъединитель', damage: ['Поломка рукоятки включения']),
     Item(name: 'Отпаячный разъединитель', damage: ['Сломанные ножи разъединителя']),
@@ -31,6 +34,7 @@ class DropdownScreenState extends State<DropdownScreen> {
   Widget build(BuildContext context) {
     PageController pageController = PageController(initialPage: 0);
     Size size = MediaQuery.of(context).size;
+
       return Scaffold(
         // appBar: AppBar(
         //   title: Text('Обход'),),
@@ -212,27 +216,14 @@ class DropdownScreenState extends State<DropdownScreen> {
                     )
                 )
             ),
-            Center(
-              child: Container(
-                width: 500,
-            child: ListView.builder(
-                itemCount: users.length,
-                itemBuilder: (context, index) => FadeAnimation(0 + 0.1 * index,
-                    ListTile(
-                      trailing: Text(users[index].name),
-                    )
-                )
-            )
-            )
-            ),
-    ListView.builder(
-    itemCount: users.length,
-    itemBuilder: (context, index) => FadeAnimation(0 + 0.1 * index,
-    ListTile(
-    trailing: Text(users[index].name),
-    )
-    )
-    )
+            FlatButton(
+              child: Text('Сохранить данные и сделать снимок'),
+                onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => CameraScreen()),
+              );
+            })
           ],
         )
 

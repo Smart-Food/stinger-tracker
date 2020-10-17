@@ -1,11 +1,9 @@
-import 'dart:math';
-
 import 'package:camera/camera.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_camera_app/pages/preview_screen.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:stinger_tracker/camera/preview_screen.dart';
 
 class CameraScreen extends StatefulWidget {
   @override
@@ -144,7 +142,6 @@ class _CameraScreenState extends State {
   }
 
   /// Display a row of toggle to select the camera (or a message if no camera is available).
-
   Widget _cameraToggleRowWidget() {
     if (cameras == null || cameras.isEmpty) {
       return Spacer();
@@ -163,11 +160,11 @@ class _CameraScreenState extends State {
             size: 24,
           ),
           label: Text(
-              '${lensDirection.toString().substring(lensDirection.toString().indexOf('.') + 1).toUpperCase()}',
-              style: TextStyle(
+            '${lensDirection.toString().substring(lensDirection.toString().indexOf('.') + 1).toUpperCase()}',
+            style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w500
-              ),),
+            ),),
         ),
       ),
     );
@@ -194,15 +191,15 @@ class _CameraScreenState extends State {
   void _onCapturePressed(context) async {
     try {
       final path =
-          join((await getTemporaryDirectory()).path, '${DateTime.now()}.png');
+      join((await getTemporaryDirectory()).path, '${DateTime.now()}.png');
       await controller.takePicture(path);
 
       Navigator.push(
         context,
         MaterialPageRoute(
             builder: (context) => PreviewScreen(
-                  imgPath: path,
-                )),
+              imgPath: path,
+            )),
       );
     } catch (e) {
       _showCameraException(e);
@@ -211,7 +208,7 @@ class _CameraScreenState extends State {
 
   void _onSwitchCamera() {
     selectedCameraIndex =
-        selectedCameraIndex < cameras.length - 1 ? selectedCameraIndex + 1 : 0;
+    selectedCameraIndex < cameras.length - 1 ? selectedCameraIndex + 1 : 0;
     CameraDescription selectedCamera = cameras[selectedCameraIndex];
     _initCameraController(selectedCamera);
   }

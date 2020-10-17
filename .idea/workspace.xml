@@ -23,24 +23,72 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a88ed0a-f687-4acb-9c2f-0f04e704d211" name="Default Changelist" comment="ДАВАЙ! УРРА! ДАВАЙ! ДАВАЙ!">
-      <change afterPath="$PROJECT_DIR$/assets/icons/Sun1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/speech_to_text.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/camera/preview_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/stinger_tracker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/stinger_tracker.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/Sun.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/loginsignup.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/loginsignup.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Screens/home/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/home/home_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Screens/home/product_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/home/product_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Screens/loginsignup/land.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/loginsignup/land.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Screens/loginsignup/loginsignup_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/loginsignup/loginsignup_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Screens/loginsignup/sun.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/loginsignup/sun.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/.metadata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/android/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/android/app/src/debug/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/android/app/src/main/kotlin/com/devplanet/flutter_camera_app/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/android/app/src/main/res/drawable/launch_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/android/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/android/app/src/profile/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/android/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/android/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/android/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Flutter/AppFrameworkInfo.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Flutter/Debug.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Flutter/Release.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner/AppDelegate.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner/AppDelegate.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner/Base.lproj/LaunchScreen.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner/Base.lproj/Main.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/ios/Runner/main.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/lib/main.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/lib/pages/camera_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/camera/camera_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/lib/pages/preview_screen.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/pubspec.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_camera_app-master/test/widget_test.dart" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/size_config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/size_config.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/speech_recognition.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/speech_recognition.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,16 +120,17 @@
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../flutter_camera_app-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/camera" />
+      <recent name="$PROJECT_DIR$/android/app" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets/icons" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/android/app" />
     </key>
   </component>
   <component name="RunManager">
@@ -136,41 +185,41 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1649" y="314" width="524" height="494" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1602892662455" />
-    <state x="178" y="128" width="2205" height="771" key="AVDManager" timestamp="1602925151237">
+    <state x="178" y="128" width="2205" height="771" key="AVDManager" timestamp="1602944225295">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="178" y="128" width="2205" height="771" key="AVDManager/0.0.2560.1040@0.0.2560.1040" timestamp="1602925151237" />
+    <state x="178" y="128" width="2205" height="771" key="AVDManager/0.0.2560.1040@0.0.2560.1040" timestamp="1602944225295" />
     <state x="100" y="123" width="1240" height="601" key="AVDManager/0.23.1440.811@0.23.1440.811" timestamp="1602864491892" />
     <state x="278" y="23" key="CommitChangelistDialog2" timestamp="1602865491967">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state x="278" y="23" key="CommitChangelistDialog2/0.23.1440.808@0.23.1440.808" timestamp="1602865491967" />
-    <state x="1199" y="406" width="424" height="478" key="FileChooserDialogImpl" timestamp="1602936820768">
+    <state x="1199" y="406" width="424" height="478" key="FileChooserDialogImpl" timestamp="1602939996690">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="1199" y="406" width="424" height="478" key="FileChooserDialogImpl/0.0.2560.1040@0.0.2560.1040" timestamp="1602936820768" />
-    <state width="1356" height="264" key="GridCell.Tab.0.bottom" timestamp="1602936820913">
+    <state x="1199" y="406" width="424" height="478" key="FileChooserDialogImpl/0.0.2560.1040@0.0.2560.1040" timestamp="1602939996690" />
+    <state width="1237" height="276" key="GridCell.Tab.0.bottom" timestamp="1602945380155">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1356" height="264" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1602936820913" />
+    <state width="1237" height="276" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1602945380155" />
     <state width="1398" height="205" key="GridCell.Tab.0.bottom/0.23.1440.808@0.23.1440.808" timestamp="1602865361846" />
     <state width="1398" height="205" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1602865205953" />
-    <state width="1356" height="264" key="GridCell.Tab.0.center" timestamp="1602936820913">
+    <state width="1237" height="276" key="GridCell.Tab.0.center" timestamp="1602945380155">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1356" height="264" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1602936820913" />
+    <state width="1237" height="276" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1602945380155" />
     <state width="1398" height="205" key="GridCell.Tab.0.center/0.23.1440.808@0.23.1440.808" timestamp="1602865361845" />
     <state width="1398" height="205" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1602865205951" />
-    <state width="1356" height="264" key="GridCell.Tab.0.left" timestamp="1602936820912">
+    <state width="1237" height="276" key="GridCell.Tab.0.left" timestamp="1602945380155">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1356" height="264" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1602936820912" />
+    <state width="1237" height="276" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1602945380155" />
     <state width="1398" height="205" key="GridCell.Tab.0.left/0.23.1440.808@0.23.1440.808" timestamp="1602865361845" />
     <state width="1398" height="205" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1602865205947" />
-    <state width="1356" height="264" key="GridCell.Tab.0.right" timestamp="1602936820913">
+    <state width="1237" height="276" key="GridCell.Tab.0.right" timestamp="1602945380155">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1356" height="264" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1602936820913" />
+    <state width="1237" height="276" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1602945380155" />
     <state width="1398" height="205" key="GridCell.Tab.0.right/0.23.1440.808@0.23.1440.808" timestamp="1602865361845" />
     <state width="1398" height="205" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1602865205952" />
     <state x="320" y="163" key="Vcs.Push.Dialog.v2" timestamp="1602865499920">
