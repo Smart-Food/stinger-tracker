@@ -1,12 +1,13 @@
 # This is a generated file; do not edit or check into version control.
-cloud_firestore=/home/pavel/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.14.1+3/
-cloud_firestore_web=/home/pavel/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-0.2.0+4/
-firebase_core=/home/pavel/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.5.0+1/
-firebase_core_web=/home/pavel/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.2.0/
-path_provider_linux=/home/pavel/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-0.0.1+2/
-path_provider_windows=/home/pavel/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-0.0.4+1/
-shared_preferences=/home/pavel/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.5.12+2/
-shared_preferences_linux=/home/pavel/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_linux-0.0.2+2/
-shared_preferences_macos=/home/pavel/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_macos-0.0.1+10/
-shared_preferences_web=/home/pavel/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_web-0.1.2+7/
-shared_preferences_windows=/home/pavel/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_windows-0.0.1+1/
+cloud_firestore=/Users/dyk.fam/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.14.1+3/
+cloud_firestore_web=/Users/dyk.fam/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-0.2.0+4/
+firebase_core=/Users/dyk.fam/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.5.0+1/
+firebase_core_web=/Users/dyk.fam/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.2.0/
+path_provider_linux=/Users/dyk.fam/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-0.0.1+2/
+path_provider_windows=/Users/dyk.fam/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-0.0.4+1/
+shared_preferences=/Users/dyk.fam/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.5.12+2/
+shared_preferences_linux=/Users/dyk.fam/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_linux-0.0.2+2/
+shared_preferences_macos=/Users/dyk.fam/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_macos-0.0.1+10/
+shared_preferences_web=/Users/dyk.fam/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_web-0.1.2+7/
+shared_preferences_windows=/Users/dyk.fam/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_windows-0.0.1+1/
+speech_recognition=/Users/dyk.fam/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/speech_recognition-0.3.0+1/
