@@ -218,10 +218,14 @@ PODS:
   - BoringSSL-GRPC/Implementation (0.0.7):
     - BoringSSL-GRPC/Interface (= 0.0.7)
   - BoringSSL-GRPC/Interface (0.0.7)
+  - camera (0.0.1):
+    - Flutter
   - cloud_firestore (0.14.1-3):
     - Firebase/CoreOnly (~> 6.26.0)
     - Firebase/Firestore (~> 6.26.0)
     - firebase_core
+    - Flutter
+  - esys_flutter_share (0.0.1):
     - Flutter
   - Firebase/Analytics (6.26.0):
     - Firebase/Core
@@ -333,19 +337,29 @@ PODS:
     - nanopb/encode (= 1.30905.0)
   - nanopb/decode (1.30905.0)
   - nanopb/encode (1.30905.0)
+  - path_provider (0.0.1):
+    - Flutter
   - PromisesObjC (1.2.10)
   - shared_preferences (0.0.1):
     - Flutter
   - speech_recognition (0.3.0):
     - Flutter
+  - speech_to_text (0.0.1):
+    - Flutter
+    - Try
+  - Try (2.1.1)
 
 DEPENDENCIES:
+  - camera (from `.symlinks/plugins/camera/ios`)
   - cloud_firestore (from `.symlinks/plugins/cloud_firestore/ios`)
+  - esys_flutter_share (from `.symlinks/plugins/esys_flutter_share/ios`)
   - Firebase/Analytics
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
   - Flutter (from `Flutter`)
+  - path_provider (from `.symlinks/plugins/path_provider/ios`)
   - shared_preferences (from `.symlinks/plugins/shared_preferences/ios`)
   - speech_recognition (from `.symlinks/plugins/speech_recognition/ios`)
+  - speech_to_text (from `.symlinks/plugins/speech_to_text/ios`)
 
 SPEC REPOS:
   trunk:
@@ -367,23 +381,34 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
+    - Try
 
 EXTERNAL SOURCES:
+  camera:
+    :path: ".symlinks/plugins/camera/ios"
   cloud_firestore:
     :path: ".symlinks/plugins/cloud_firestore/ios"
+  esys_flutter_share:
+    :path: ".symlinks/plugins/esys_flutter_share/ios"
   firebase_core:
     :path: ".symlinks/plugins/firebase_core/ios"
   Flutter:
     :path: Flutter
+  path_provider:
+    :path: ".symlinks/plugins/path_provider/ios"
   shared_preferences:
     :path: ".symlinks/plugins/shared_preferences/ios"
   speech_recognition:
     :path: ".symlinks/plugins/speech_recognition/ios"
+  speech_to_text:
+    :path: ".symlinks/plugins/speech_to_text/ios"
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
+  camera: a0ca5080336f7af47b88436e5e26da3dee5568f0
   cloud_firestore: db3dab8f6a348f0f6ec01c3ba911ec5ac5e0df1a
+  esys_flutter_share: 403498dab005b36ce1f8d7aff377e81f0621b0b4
   Firebase: 7cf5f9c67f03cb3b606d1d6535286e1080e57eb6
   firebase_core: 00e54a4744164a6b5a250b96dd1ad5afaba7a342
   FirebaseAnalytics: 96634d356482d4f3af8fe459a0ebf19a99c71b75
@@ -401,10 +426,13 @@ SPEC CHECKSUMS:
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
+  path_provider: abfe2b5c733d04e238b0d8691db0cfd63a27a93c
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
   shared_preferences: af6bfa751691cdc24be3045c43ec037377ada40d
   speech_recognition: b5319aace06c3633c0547de44899f6e0bf8b2168
+  speech_to_text: b43a7d99aef037bd758ed8e45d79bbac035d2dfe
+  Try: 5ef669ae832617b3cee58cb2c6f99fb767a4ff96
 
-PODFILE CHECKSUM: 9a8d6132d32aa685906dac95dbd1a98da88d57a0
+PODFILE CHECKSUM: 5152bd23b82ece946859d1b91a829816b9268d4d
 
 COCOAPODS: 1.9.3

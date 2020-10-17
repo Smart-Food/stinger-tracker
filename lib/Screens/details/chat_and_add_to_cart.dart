@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
+import 'package:stinger_tracker/camera/camera_screen.dart';
+import 'package:stinger_tracker/csv_operations.dart';
+import 'package:csv/csv.dart';
 import '../../constants.dart';
 
 class ChatAndAddToCart extends StatelessWidget {
@@ -34,13 +36,31 @@ class ChatAndAddToCart extends StatelessWidget {
           // it will cover all available spaces
           Spacer(),
           FlatButton.icon(
-            onPressed: () {},
+              onPressed: () {
+                // List<List> inspection = [
+                //   [users[0].name, users[0].damage[0]]
+                // ];
+                // String csv = const ListToCsvConverter(textDelimiter: '|').convert(inspection);
+                // //print(csv);
+                // widget.storage.writeData(csv);
+                // widget.storage.readData().then((contents) {
+                //   setState(() {
+                //     //fileContents = contents;
+                //   });
+                //   print(contents);
+                // });
+                // widget.storage.localPath.then((s){print(s);});
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CameraScreen()),
+                );
+              },
             icon: SvgPicture.asset(
               "assets/icons/shopping-bag.svg",
               height: 18,
             ),
             label: Text(
-              "Написать",
+              "Сохранить данные и сделать снимок",
               style: TextStyle(color: Colors.white),
             ),
           ),

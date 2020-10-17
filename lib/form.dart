@@ -223,7 +223,7 @@ class DropdownScreenState extends State<DropdownScreen> {
                 )
             ),
             FlatButton(
-              child: Text('Сохранить данные и сделать снимок'),
+                child: Text('Сохранить данные и сделать снимок'),
                 onPressed: () {
                   List<List> inspection = [
                     [users[0].name, users[0].damage[0]]
@@ -235,11 +235,11 @@ class DropdownScreenState extends State<DropdownScreen> {
                     print(contents);
                   });
                   widget.storage.localPath.then((s){print(s);});
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => CameraScreen()),
-              );
-            })
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CameraScreen()),
+                  );
+                })
           ],
         )
 

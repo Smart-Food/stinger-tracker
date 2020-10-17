@@ -10,12 +10,14 @@ class ProductCard extends StatelessWidget {
     this.masterName,
     this.isCheck,
     this.address,
-    this.itemIndex
+    this.itemIndex,
+    this.onTap
   });
 
   final String masterName, address;
   final bool isCheck;
   final int itemIndex;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -29,16 +31,7 @@ class ProductCard extends StatelessWidget {
       // color: Colors.blueAccent,
       height: 160,
       child: InkWell(
-        onTap: () => Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => DetailsScreen(
-              masterName: masterName,
-              isCheck: isCheck,
-              address: address,
-            ),
-          ),
-        ),
+        onTap: onTap,
         child: Stack(
           alignment: Alignment.bottomCenter,
           children: <Widget>[

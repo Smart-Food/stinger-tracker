@@ -10,6 +10,7 @@ import 'product_card.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:stinger_tracker/form.dart';
 import 'package:stinger_tracker/masterform.dart';
+import 'package:stinger_tracker/Screens/details/details_screen.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -164,6 +165,17 @@ class _HomeScreenScreenState extends State<HomeScreen> {
                     isCheck: snapshot.data.documents[index].data()["isCheck"],
                     address: snapshot.data.documents[index].data()["address"],
                     itemIndex: index,
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => DetailsScreen(
+                          masterName: snapshot.data.documents[index].data()["masterName"],
+                          isCheck: snapshot.data.documents[index].data()["isCheck"],
+                          address: snapshot.data.documents[index].data()["address"],
+                          description: snapshot.data.documents[index].data()["description"],
+                        ),
+                      ),
+                    ),
                   )
                 )
               );
