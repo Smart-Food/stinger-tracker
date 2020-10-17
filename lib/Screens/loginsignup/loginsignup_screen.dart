@@ -212,16 +212,16 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                                         fontWeight: FontWeight.bold, color: Colors.white),
                                   ),
                               ),
-                              VerticalSpacing(of: 10),
-                              FadeAnimation(
-                                  0.2,
-                                  Text(
-                                    isSignup
-                                        ? "Зарегистрируйтесь в нашем приложении"
-                                        : "Войдите в свой аккаунт",
-                                    style: TextStyle(color: Colors.white),
-                                  ),
-                              ),
+                              // VerticalSpacing(of: 50),
+                              // FadeAnimation(
+                              //     0.2,
+                              //     Text(
+                              //       isSignup
+                              //           ? "Зарегистрируйтесь в нашем приложении"
+                              //           : "Войдите в свой аккаунт",
+                              //       style: TextStyle(color: Colors.white),
+                              //     ),
+                              // ),
                               VerticalSpacing(of: 50),
                               FadeAnimation(
                                   0.3,
@@ -246,7 +246,7 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                                       isPassword: true
                                   ),
                               ),
-                              VerticalSpacing(of: 10),
+                              VerticalSpacing(of: 50),
                               Center(
                                 child: FadeAnimation(
                                     0.4,

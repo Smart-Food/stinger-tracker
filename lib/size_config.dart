@@ -19,14 +19,14 @@ class SizeConfig {
 double getProportionateScreenHeight(double inputHeight) {
   double screenHeight = SizeConfig.screenHeight;
   // Our designer use iPhone 11 , that's why we use 896.0
-  return (inputHeight / 896.0) * screenHeight;
+  return (inputHeight / 1440.0) * screenHeight;
 }
 
 // Get the proportionate height as per screen size
 double getProportionateScreenWidth(double inputWidth) {
   double screenWidth = SizeConfig.screenWidth;
   // 414 is the layout width that designer use or you can say iPhone 11  width
-  return (inputWidth / 414.0) * screenWidth;
+  return (inputWidth / 2560.0) * screenWidth;
 }
 
 // For add free space vertically

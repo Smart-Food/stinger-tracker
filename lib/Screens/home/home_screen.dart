@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:stinger_tracker/Screens/loginsignup/sun.dart';
 import 'package:stinger_tracker/constants.dart';
 import 'package:stinger_tracker/components/search_box.dart';
 import 'package:stinger_tracker/fade_animation.dart';
 import 'package:stinger_tracker/models/product.dart';
 import 'product_card.dart';
-import 'package:stinger_tracker/screens/loginsignup/sun.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class HomeScreen extends StatefulWidget {

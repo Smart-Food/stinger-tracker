@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:stinger_tracker/Screens/details/details_screen.dart';
 import 'package:stinger_tracker/models/product.dart';
-import 'package:stinger_tracker/screens/details/details_screen.dart';
 import '../../constants.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

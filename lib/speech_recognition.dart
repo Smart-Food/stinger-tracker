@@ -14,7 +14,7 @@ class Language {
 
 class SpeechRecognitionPage extends StatefulWidget {
   @override
-  _SpeechRecognitionPageState createState() => new _SpeechRecognitionPageState();
+  _SpeechRecognitionPageState createState() => _SpeechRecognitionPageState();
 }
 
 class _SpeechRecognitionPageState extends State<SpeechRecognitionPage> {
@@ -50,29 +50,29 @@ class _SpeechRecognitionPageState extends State<SpeechRecognitionPage> {
 
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: new Text('Тест'),
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Тест'),
           actions: [
-            new PopupMenuButton<Language>(
+            PopupMenuButton<Language>(
               onSelected: _selectLangHandler,
               itemBuilder: (BuildContext context) => _buildLanguagesWidgets,
             )
           ],
         ),
-        body: new Padding(
-            padding: new EdgeInsets.all(8.0),
-            child: new Center(
-              child: new Column(
+        body: Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Center(
+              child: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  new Expanded(
-                      child: new Container(
+                  Expanded(
+                      child: Container(
                           padding: const EdgeInsets.all(8.0),
                           color: Colors.grey.shade200,
-                          child: new Text(transcription))),
+                          child: Text(transcription))),
                   _buildButton(
                     onPressed: _speechRecognitionAvailable && !_isListening
                         ? () => start()
@@ -97,7 +97,7 @@ class _SpeechRecognitionPageState extends State<SpeechRecognitionPage> {
   }
 
   List<CheckedPopupMenuItem<Language>> get _buildLanguagesWidgets => languages
-      .map((l) => new CheckedPopupMenuItem<Language>(
+      .map((l) => CheckedPopupMenuItem<Language>(
     value: l,
     checked: selectedLang == l,
     child: new Text(l.name),
@@ -108,12 +108,12 @@ class _SpeechRecognitionPageState extends State<SpeechRecognitionPage> {
     setState(() => selectedLang = lang);
   }
 
-  Widget _buildButton({String label, VoidCallback onPressed}) => new Padding(
-      padding: new EdgeInsets.all(12.0),
-      child: new RaisedButton(
+  Widget _buildButton({String label, VoidCallback onPressed}) => Padding(
+      padding: EdgeInsets.all(12.0),
+      child: RaisedButton(
         color: Colors.cyan.shade600,
         onPressed: onPressed,
-        child: new Text(
+        child: Text(
           label,
           style: const TextStyle(color: Colors.white),
         ),
@@ -121,7 +121,7 @@ class _SpeechRecognitionPageState extends State<SpeechRecognitionPage> {
 
   void start() => _speech
       .listen(locale: selectedLang.code)
-      .then((result) => print('_MyAppState.start => result ${result}'));
+      .then((result) => print('_MyAppState.start => result $result'));
 
   void cancel() =>
       _speech.cancel().then((result) => setState(() => _isListening = result));

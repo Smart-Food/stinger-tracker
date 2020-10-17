@@ -1,83 +1,241 @@
 import 'package:flutter/material.dart';
 
+import 'constants.dart';
+import 'fade_animation.dart';
+
 class Item {
-  const Item(this.name,this.icon, this.damage);
-  final String name;
-  final Icon icon;
-  final List<String> damage;
+  String name;
+  String object;
+  DateTime startDate, endDate;
+  Icon icon;
+  List<String> damage;
+  int isSelected = 0;
+  Item({this.name,this.icon, this.damage, this.object, this.startDate, this.endDate, this.isSelected});
 }
+
+
+
 class DropdownScreen extends StatefulWidget {
   State createState() => DropdownScreenState();
 }
+
 class DropdownScreenState extends State<DropdownScreen> {
-  Item selectedUser;
   List<Item> users = <Item>[
-    const Item('Линейный разъединитель',Icon(Icons.android,color:  const Color(0xFF167F67)),
-        ['Поломка рукоятки включения']),
-    const Item('Отпаячный разъединитель',Icon(Icons.flag,color:  const Color(0xFF167F67)),
-        ['Сломанные ножи разъединителя']),
-    const Item('Провод',Icon(Icons.format_indent_decrease,color:  const Color(0xFF167F67)),
-        ['Провис']),
-    const Item('Разрядник',Icon(Icons.mobile_screen_share,color:  const Color(0xFF167F67)),
-        ['Перегорел']),
-    const Item('Изолятор',Icon(Icons.mobile_screen_share,color:  const Color(0xFF167F67)),
-        ['Трещина']),
+    Item(name: 'Линейный разъединитель', damage: ['Поломка рукоятки включения']),
+    Item(name: 'Отпаячный разъединитель', damage: ['Сломанные ножи разъединителя']),
+    Item(name: 'Провод', damage: ['Провис']),
+    Item(name: 'Разрядник', damage: ['Перегорел']),
+    Item(name: 'Изолятор', damage: ['Трещина']),
   ];
   @override
   Widget build(BuildContext context) {
+    PageController pageController = PageController(initialPage: 0);
+    Size size = MediaQuery.of(context).size;
       return Scaffold(
-        appBar: AppBar(title: Text('a'),),
-        body:  Column (
-            children: [
-            DropdownButton<Item>(
-              hint: Text("Select item"),
-              value: selectedUser,
-              onChanged: (Item value) {
-                setState(() {
-                  selectedUser = value;
-                });
-              },
-              items: users.map((Item user) {
-                return  DropdownMenuItem<Item>(
-                  value: user,
-                  child: Row(
-                    children: <Widget>[
-                      user.icon,
-                      SizedBox(width: 10),
-                      Text(
-                        user.name,
-                        style:  TextStyle(color: Colors.black),
+        // appBar: AppBar(
+        //   title: Text('Обход'),),
+        body: PageView(
+          controller: pageController,
+          scrollDirection: Axis.horizontal,
+          children: [
+            ListView.builder(
+                itemCount: users.length,
+                itemBuilder: (context, index) => FadeAnimation(0 + 0.1 * index,
+                    Container(
+                      margin: EdgeInsets.symmetric(
+                        horizontal: kDefaultPadding,
+                        vertical: kDefaultPadding / 2,
                       ),
-                    ],
-                  ),
-                );
-              }).toList(),
-            ),
-            DropdownButton<Item>(
-              hint: Text("Select item"),
-              value: selectedUser,
-              onChanged: (Item value) {
-                setState(() {
-                  selectedUser = value;
-                });
-              },
-              items: users.map((Item user) {
-                return DropdownMenuItem<Item>(
-                  value: user,
-                  child: Row(
-                    children: <Widget>[
-                      user.icon,
-                      SizedBox(width: 10),
-                      Text(
-                        user.damage[0],
-                        style: TextStyle(color: Colors.black),
+                      // color: Colors.blueAccent,
+                      height: 160,
+                      child: InkWell(
+                        onTap: () {
+                          setState(() {
+                            if (users[index].isSelected == 0)
+                              users[index].isSelected = 1;
+                            else
+                              users[index].isSelected = 0;
+                          });
+                          // pageController.animateToPage(1,
+                          //     duration: Duration(milliseconds: 250),
+                          //     curve: Curves.bounceOut);
+                        },
+                        child: Stack(
+                          alignment: Alignment.bottomCenter,
+                          children: <Widget>[
+                            // Those are our background
+                            Container(
+                              height: 136,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(22),
+                                color: users[index].isSelected == 1 ? kBlueColor : kSecondaryColor,
+                                boxShadow: [kDefaultShadow],
+                              ),
+                              child: Container(
+                                margin: EdgeInsets.only(right: 10),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(22),
+                                ),
+                              ),
+                            ),
+                            // our product image
+                            // Product title and price
+                            Positioned(
+                              bottom: 0,
+                              left: 0,
+                              child: SizedBox(
+                                height: 136,
+                                // our image take 200 width, thats why we set out total width - 200
+                                width: size.width - 200,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Spacer(),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: kDefaultPadding),
+                                      child: Text(
+                                        users[index].name,
+                                        style: Theme.of(context).textTheme.button,
+                                      ),
+                                    ),
+                                    // it use the available space
+                                    Spacer(),
+                                    Container(
+                                      padding: EdgeInsets.symmetric(
+                                        horizontal: kDefaultPadding * 1.5, // 30 padding
+                                        vertical: kDefaultPadding / 4, // 5 top and bottom
+                                      ),
+                                      decoration: BoxDecoration(
+                                        color: kSecondaryColor,
+                                        borderRadius: BorderRadius.only(
+                                          bottomLeft: Radius.circular(22),
+                                          topRight: Radius.circular(22),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                    ],
-                  ),
-                );
-              }).toList(),
+                    )
+                )
+          ),
+            ListView.builder(
+                itemCount: users.length,
+                itemBuilder: (context, index) => FadeAnimation(0 + 0.1 * index,
+                    Container(
+                      margin: EdgeInsets.symmetric(
+                        horizontal: kDefaultPadding,
+                        vertical: kDefaultPadding / 2,
+                      ),
+                      // color: Colors.blueAccent,
+                      height: 160,
+                      child: InkWell(
+                        onTap: () {
+                          setState(() {
+                            if (users[index].isSelected == 0)
+                              users[index].isSelected = 1;
+                            else
+                              users[index].isSelected = 0;
+                          });
+                          // pageController.animateToPage(1,
+                          //     duration: Duration(milliseconds: 250),
+                          //     curve: Curves.bounceOut);
+                        },
+                        child: Stack(
+                          alignment: Alignment.bottomCenter,
+                          children: <Widget>[
+                            // Those are our background
+                            Container(
+                              height: 136,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(22),
+                                color: users[index].isSelected == 1 ? kBlueColor : kSecondaryColor,
+                                boxShadow: [kDefaultShadow],
+                              ),
+                              child: Container(
+                                margin: EdgeInsets.only(right: 10),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(22),
+                                ),
+                              ),
+                            ),
+                            // our product image
+                            // Product title and price
+                            Positioned(
+                              bottom: 0,
+                              left: 0,
+                              child: SizedBox(
+                                height: 136,
+                                // our image take 200 width, thats why we set out total width - 200
+                                width: size.width - 200,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Spacer(),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: kDefaultPadding),
+                                      child: Text(
+                                        users[index].damage[0],
+                                        style: Theme.of(context).textTheme.button,
+                                      ),
+                                    ),
+                                    // it use the available space
+                                    Spacer(),
+                                    Container(
+                                      padding: EdgeInsets.symmetric(
+                                        horizontal: kDefaultPadding * 1.5, // 30 padding
+                                        vertical: kDefaultPadding / 4, // 5 top and bottom
+                                      ),
+                                      decoration: BoxDecoration(
+                                        color: kSecondaryColor,
+                                        borderRadius: BorderRadius.only(
+                                          bottomLeft: Radius.circular(22),
+                                          topRight: Radius.circular(22),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    )
+                )
             ),
-        ])
+            Center(
+              child: Container(
+                width: 500,
+            child: ListView.builder(
+                itemCount: users.length,
+                itemBuilder: (context, index) => FadeAnimation(0 + 0.1 * index,
+                    ListTile(
+                      trailing: Text(users[index].name),
+                    )
+                )
+            )
+            )
+            ),
+    ListView.builder(
+    itemCount: users.length,
+    itemBuilder: (context, index) => FadeAnimation(0 + 0.1 * index,
+    ListTile(
+    trailing: Text(users[index].name),
+    )
+    )
+    )
+          ],
+        )
+
       );
   }
 }

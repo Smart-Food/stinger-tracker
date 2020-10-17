@@ -11,10 +11,10 @@ class Land extends StatelessWidget {
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.bottomCenter,
-      child: SvgPicture.asset(
-          "assets/images/loginsignup.svg",
-          alignment: Alignment.bottomCenter
-      ),
+      // child: SvgPicture.asset(
+      //     "assets/images/loginsignup.svg",
+      //     alignment: Alignment.bottomCenter
+      // ),
     );
   }
 }
