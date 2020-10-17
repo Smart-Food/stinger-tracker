@@ -1,5 +1,6 @@
 import 'dart:io';
-
+import 'dart:math';
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'camera/camera_screen.dart';
 import 'constants.dart';
@@ -37,7 +38,42 @@ class DropdownScreenState extends State<DropdownScreen> {
   Widget build(BuildContext context) {
     PageController pageController = PageController(initialPage: 0);
     Size size = MediaQuery.of(context).size;
-
+    //Окно с вызовом скорой
+  Widget showAlertDialog(BuildContext context) {
+      Widget cancelButton = FlatButton(
+        child: Text("Отмена"),
+        onPressed:  () {Navigator.of(context).pop();},
+      );
+      AlertDialog alert = AlertDialog(
+        title: Text("ЗАфиксирована опасность!"),
+        content: Text("Через 30 секунд произойдет вызов скорой помощи"),
+        actions: [
+          cancelButton,
+          ],
+          );
+        showDialog(
+            context: context,
+             builder: (BuildContext context) {
+            return alert;
+          },
+        );
+      }
+      var random = Random();
+      int counter = 2 + random.nextInt(3);      
+      print(counter);
+      Timer timer;      
+      void startTimer(){
+        timer = Timer.periodic(Duration(seconds:1), (timer) {
+        if(counter>0) {counter--;}
+        else{
+        timer.cancel();
+        showAlertDialog(context);
+            } 
+          }
+        );
+      }
+      startTimer();
+//
       return Scaffold(
         body: PageView(
           controller: pageController,
