@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:path/path.dart';
 import 'package:stinger_tracker/form.dart';
-
+import 'package:stinger_tracker/csv_operations.dart';
 class PreviewScreen extends StatefulWidget{
   final String imgPath;
 
@@ -44,7 +44,7 @@ class _PreviewScreenState extends State<PreviewScreen>{
                     onPressed: (){
                       getBytesFromFile().then((bytes){
                         Share.file('Share via', basename(widget.imgPath), bytes.buffer.asUint8List(),'image/path');
-                        MaterialPageRoute(builder: (context) => DropdownScreen());
+                        MaterialPageRoute(builder: (context) => DropdownScreen(Storage('list.csv')));
                       });
                     },
                   ),

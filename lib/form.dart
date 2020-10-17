@@ -5,6 +5,7 @@ import 'camera/camera_screen.dart';
 import 'constants.dart';
 import 'fade_animation.dart';
 import 'package:stinger_tracker/csv_operations.dart';
+import 'package:csv/csv.dart';
 class Item {
   String name;
   String object;
@@ -222,14 +223,14 @@ class DropdownScreenState extends State<DropdownScreen> {
               child: Text('Сохранить данные и сделать снимок'),
                 onPressed: () {
                   List<List> inspection = [
-                    [users[index].name, selectedUser.damage[0]]
+                    [users[0].name, users[0].damage[0]]
                   ];
                   String csv = const ListToCsvConverter(textDelimiter: '|').convert(inspection);
                   //print(csv);
                   widget.storage.writeData(csv);
                   widget.storage.readData().then((contents) {
                     setState(() {
-                      fileContents = contents;
+                      //fileContents = contents;
                     });
                     print(contents);
                   });
