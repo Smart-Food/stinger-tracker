@@ -30,7 +30,7 @@ class Tabs extends StatelessWidget {
           labelColor: Colors.black,
           unselectedLabelColor: Colors.white,
           onTap: press,
-          tabs: [Tab(text: "Дневная тема"), Tab(text: "Ночная тема")],
+          tabs: [Tab(text: "Электромонтер"), Tab(text: "Мастер")],
         ),
       ),
     );

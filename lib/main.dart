@@ -5,6 +5,7 @@ import 'package:stinger_tracker/speech_recognition.dart';
 import 'csv_operations.dart';
 import 'Screens/loginsignup/loginsignup_screen.dart';
 import 'masterform.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -26,3 +27,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
