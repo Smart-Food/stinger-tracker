@@ -1,12 +1,8 @@
-import 'dart:io';
-
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:stinger_tracker/Screens/home/home_screen.dart';
-import 'camera/camera_screen.dart';
 import 'constants.dart';
-import 'fade_animation.dart';
 import 'package:stinger_tracker/csv_operations.dart';
-import 'package:csv/csv.dart';
+
 class Item {
   String name;
   String object;
@@ -26,218 +22,181 @@ class MasterDropdownScreen extends StatefulWidget {
 }
 
 class MasterDropdownScreenState extends State<MasterDropdownScreen> {
-  File imageFile;
-  List<Item> users = <Item>[
-    Item(name: 'ВЛ 10 кВ ТП №265- ТП № 240', worker: ['Алексей Сенников']),
-    Item(name: 'ВЛ 13 кВ ТП №228- ТП № 210', worker: ['Дык Фам Минь']),
-    Item(name: 'ВЛ 33 кВ ТП №520- ТП № 510', worker: ['Павел Ивин']),
-    Item(name: 'ВЛ 5 кВ ТП №80- ТП № 65', worker: ['Евгений Жданов']),
-    Item(name: 'ВЛ 23 кВ ТП №144- ТП № 130', worker: ['Вениамин  Манукян']),
-  ];
   @override
   Widget build(BuildContext context) {
-    PageController pageController = PageController(initialPage: 0);
-    Size size = MediaQuery.of(context).size;
+
+    String _inputErrorText;
+    final TextEditingController _heading =  TextEditingController();
+    final TextEditingController _topic =  TextEditingController();
+    final TextEditingController _description =  TextEditingController();
+    final TextEditingController _area =  TextEditingController();
+
+    final objects = [
+      'a', 'b', 'c'
+    ];
+    final teams = [
+      'a', 'b', 'c'
+    ];
+    final places = [
+      'a', 'b', 'c'
+    ];
 
       return Scaffold(
-        // appBar: AppBar(
-        //   title: Text('Обход'),),
-        body: PageView(
-          controller: pageController,
-          scrollDirection: Axis.horizontal,
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ListView.builder(
-                itemCount: users.length,
-                itemBuilder: (context, index) => FadeAnimation(0 + 0.1 * index,
-                    Container(
-                      margin: EdgeInsets.symmetric(
-                        horizontal: kDefaultPadding,
-                        vertical: kDefaultPadding / 2,
-                      ),
-                      // color: Colors.blueAccent,
-                      height: 160,
-                      child: InkWell(
-                        onTap: () {
-                          setState(() {
-                            if (users[index].isSelected == 0)
-                              users[index].isSelected = 1;
-                            else
-                              users[index].isSelected = 0;
-                          });
-                          // pageController.animateToPage(1,
-                          //     duration: Duration(milliseconds: 250),
-                          //     curve: Curves.bounceOut);
-                        },
-                        child: Stack(
-                          alignment: Alignment.bottomCenter,
-                          children: <Widget>[
-                            // Those are our background
-                            Container(
-                              height: 136,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(22),
-                                color: users[index].isSelected == 1 ? kBlueColor : kSecondaryColor,
-                                boxShadow: [kDefaultShadow],
-                              ),
-                              child: Container(
-                                margin: EdgeInsets.only(right: 10),
-                                decoration: BoxDecoration(
-                                  color: Colors.lime[50],
-                                  borderRadius: BorderRadius.circular(22),
-                                ),
-                              ),
-                            ),
-                            // our product image
-                            // Product title and price
-                            Positioned(
-                              bottom: 0,
-                              left: 0,
-                              child: SizedBox(
-                                height: 136,
-                                // our image take 200 width, thats why we set out total width - 200
-                                width: size.width - 200,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Spacer(),
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: kDefaultPadding),
-                                      child: Text(
-                                        users[index].name,
-                                        style: Theme.of(context).textTheme.button,
-                                      ),
-                                    ),
-                                    // it use the available space
-                                    Spacer(),
-                                    Container(
-                                      padding: EdgeInsets.symmetric(
-                                        horizontal: kDefaultPadding * 1.5, // 30 padding
-                                        vertical: kDefaultPadding / 4, // 5 top and bottom
-                                      ),
-                                      decoration: BoxDecoration(
-                                        color: kSecondaryColor,
-                                        borderRadius: BorderRadius.only(
-                                          bottomLeft: Radius.circular(22),
-                                          topRight: Radius.circular(22),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+            Padding(padding: EdgeInsets.only(right: 300, bottom: 100),
+                child: Text(
+              'Заявка',
+              style: TextStyle(
+                  fontSize: 70,
+                  fontWeight: FontWeight.w300
+              ),
+            ))
+            ,
+            SizedBox(height: 30),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+              child: TextFormField(
+                decoration: InputDecoration(
+                    contentPadding: EdgeInsets.symmetric(
+                        vertical: 25.0, horizontal: 10.0),
+                    labelText: "Команда",
+                    errorText: _inputErrorText,
+                    fillColor: Colors.white,
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15.0),
                     )
-                )
-          ),
-            ListView.builder(
-                itemCount: users.length,
-                itemBuilder: (context, index) => FadeAnimation(0 + 0.1 * index,
-                    Container(
-                      margin: EdgeInsets.symmetric(
-                        horizontal: kDefaultPadding,
-                        vertical: kDefaultPadding / 2,
-                      ),
-                      // color: Colors.blueAccent,
-                      height: 160,
-                      child: InkWell(
-                        onTap: () {
-                          setState(() {
-                            if (users[index].isSelected == 0)
-                              users[index].isSelected = 1;
-                            else
-                              users[index].isSelected = 0;
-                          });
-                          // pageController.animateToPage(1,
-                          //     duration: Duration(milliseconds: 250),
-                          //     curve: Curves.bounceOut);
-                        },
-                        child: Stack(
-                          alignment: Alignment.bottomCenter,
-                          children: <Widget>[
-                            // Those are our background
-                            Container(
-                              height: 136,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(22),
-                                color: users[index].isSelected == 1 ? kBlueColor : kSecondaryColor,
-                                boxShadow: [kDefaultShadow],
-                              ),
-                              child: Container(
-                                margin: EdgeInsets.only(right: 10),
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(22),
-                                ),
-                              ),
-                            ),
-                            // our product image
-                            // Product title and price
-                            Positioned(
-                              bottom: 0,
-                              left: 0,
-                              child: SizedBox(
-                                height: 136,
-                                // our image take 200 width, thats why we set out total width - 200
-                                width: size.width - 200,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Spacer(),
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: kDefaultPadding),
-                                      child: Text(
-                                        users[index].worker[0],
-                                        style: Theme.of(context).textTheme.button,
-                                      ),
-                                    ),
-                                    // it use the available space
-                                    Spacer(),
-                                    Container(
-                                      padding: EdgeInsets.symmetric(
-                                        horizontal: kDefaultPadding * 1.5, // 30 padding
-                                        vertical: kDefaultPadding / 4, // 5 top and bottom
-                                      ),
-                                      decoration: BoxDecoration(
-                                        color: kSecondaryColor,
-                                        borderRadius: BorderRadius.only(
-                                          bottomLeft: Radius.circular(22),
-                                          topRight: Radius.circular(22),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    )
-                )
+                ),
+                textInputAction: TextInputAction.done,
+                controller: _heading,
+                keyboardType: TextInputType.text,
+              ),
             ),
-            FlatButton(
-              child: Text('Сохранить данные и перейти на главный экран'),
-                onPressed: () {
-                  List<List> task = [
-                    [users[0].name, users[0].worker[0]]
-                  ];
-                  String csv = const ListToCsvConverter(textDelimiter: '|').convert(task);
-                  //print(csv);
-                  widget.storage.writeData(csv);                
-                  //widget.storage.localPath.then((s){print(s);});
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => HomeScreen()),
-              );
-            })
-          ],
+            SizedBox(height: 5),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+              child: TextFormField(
+                decoration: InputDecoration(
+                    contentPadding: EdgeInsets.symmetric(
+                        vertical: 25.0, horizontal: 10.0),
+                    labelText: "Район",
+                    errorText: _inputErrorText,
+                    fillColor: Colors.white,
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                    )
+                ),
+                controller: _area,
+                keyboardType: TextInputType.text,
+              ),
+            ),
+            SizedBox(height: 5),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+              child: TextFormField(
+                decoration: InputDecoration(
+                    contentPadding: EdgeInsets.symmetric(
+                        vertical: 25.0, horizontal: 10.0),
+                    labelText: "Объект",
+                    errorText: _inputErrorText,
+                    fillColor: Colors.white,
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                        borderSide: BorderSide(
+                            color: kSecondaryColor
+                        )
+                    )
+                ),
+                controller: _topic,
+                keyboardType: TextInputType.text,
+              ),
+            ),
+            SizedBox(height: 10),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+              child: TextField(
+                decoration: InputDecoration(
+                    labelText: "Описание",
+                    errorText: _inputErrorText,
+                    fillColor: Colors.white,
+                    alignLabelWithHint: true,
+                    contentPadding: EdgeInsets.symmetric(
+                        vertical: 50.0, horizontal: 10.0),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                        borderSide: BorderSide(
+                            color: kSecondaryColor
+                        )
+                    )
+                ),
+                controller: _description,
+                keyboardType: TextInputType.multiline,
+                maxLines: null,
+              ),
+            ),
+            SizedBox(height: 10),
+            Row(
+              children: <Widget>[
+                SizedBox(width: 10),
+                CircleAvatar(
+                  radius: 7.8 * 3,
+                  backgroundColor: Color(0xFF8C2480),
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.add),
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(width: 10),
+                CircleAvatar(
+                  radius: 7.8 * 3,
+                  backgroundColor: Color(0xFFCE587D),
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.assessment),
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(width: 10),
+                CircleAvatar(
+                  radius: 7.8 * 3,
+                  backgroundColor: Color(0xFFFF9485),
+                  child: IconButton(
+                    icon: Icon(Icons.location_on),
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(height: 30),
+                Padding(
+                    padding: const EdgeInsets.only(left: 40.0, right: 40.0),
+                    child: FlatButton(
+                      minWidth: 300,
+                      onPressed: () => uploadTask(_area.text, false, 'Палыч'),
+                      color: Colors.blue[600],
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18.0),
+                      ),
+                      child: Center(
+                        child: Text("Создать",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold
+                        ),),
+                      ),))
+              ],
+            ),
+            ]
         )
-
       );
+
+  }
+  uploadTask(String address, bool isCheck, String masterName) async {
+    FirebaseFirestore.instance
+        .collection('slaves').doc('Dyk').collection('tasks').add({
+      'address': address,
+      'isCheck': isCheck,
+      'masterName': masterName
+    }) as CollectionReference;
   }
 }

@@ -39,8 +39,6 @@ class DropdownScreenState extends State<DropdownScreen> {
     Size size = MediaQuery.of(context).size;
 
       return Scaffold(
-        // appBar: AppBar(
-        //   title: Text('Обход'),),
         body: PageView(
           controller: pageController,
           scrollDirection: Axis.horizontal,
@@ -103,8 +101,11 @@ class DropdownScreenState extends State<DropdownScreen> {
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: kDefaultPadding),
                                       child: Text(
-                                        users[index].name,
-                                        style: Theme.of(context).textTheme.button,
+                                          users[index].name,
+                                        style: TextStyle(
+                                          fontSize: 17
+                                        ),
+                                        //style: Theme.of(context).textTheme.button,
                                       ),
                                     ),
                                     // it use the available space
@@ -191,7 +192,9 @@ class DropdownScreenState extends State<DropdownScreen> {
                                           horizontal: kDefaultPadding),
                                       child: Text(
                                         users[index].damage[0],
-                                        style: Theme.of(context).textTheme.button,
+                                        style: TextStyle(
+                                            fontSize: 17
+                                        ),
                                       ),
                                     ),
                                     // it use the available space
@@ -229,9 +232,6 @@ class DropdownScreenState extends State<DropdownScreen> {
                   //print(csv);
                   widget.storage.writeData(csv);
                   widget.storage.readData().then((contents) {
-                    setState(() {
-                      //fileContents = contents;
-                    });
                     print(contents);
                   });
                   widget.storage.localPath.then((s){print(s);});
