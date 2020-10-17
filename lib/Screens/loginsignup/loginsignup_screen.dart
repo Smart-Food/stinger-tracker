@@ -104,12 +104,15 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
   void signup() {
     UserGlobal().addData(
         nameSignupEditingController.text,
-        passwordSignupEditingController.text
+        passwordSignupEditingController.text,
+        !isDayMood
     ).then((value) {
       FirebaseFirestore.instance.collection(isDayMood ?"slaves":"masters").get().then((drivers){
+        print(1);
         int myIndex = 0;
         for (int index = 0; index < drivers.docs.length; index++) {
-          if (nameSignupEditingController.text == drivers.docs[index].data()["myName"]) {
+          if (nameSignupEditingController.text == drivers.docs[index].data()["myName"] &&
+            passwordSignupEditingController.text == drivers.docs[index].data()["myPassword"]) {
             myIndex = index;
             UserLocal.saveUserLoggedInSharedPreference(true);
             UserLocal.saveUserIndexSharedPreference(myIndex);
