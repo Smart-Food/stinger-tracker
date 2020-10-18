@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:stinger_tracker/constants.dart';
-import 'package:stinger_tracker/models/product.dart';
 import 'product_image.dart';
-import 'body.dart';
 import 'chat_and_add_to_cart.dart';
 import 'package:stinger_tracker/fade_animation.dart';
 import 'color_dots.dart';
@@ -38,12 +36,17 @@ class DetailsScreen extends StatefulWidget {
 
 class _DetailsScreenState extends State<DetailsScreen> {
 
+  List<Item> damages = <Item>[
+    Item(damage: ['Поломка рукоятки включения']),
+    Item(damage: ['Сломанные ножи разъединителя']),
+  ];
+
   List<Item> users = <Item>[
     Item(name: 'Линейный разъединитель', damage: ['Поломка рукоятки включения']),
     Item(name: 'Отпаячный разъединитель', damage: ['Сломанные ножи разъединителя']),
     Item(name: 'Провод', damage: ['Провис']),
-    Item(name: 'Разрядник', damage: ['Перегорел']),
-    Item(name: 'Изолятор', damage: ['Трещина']),
+    // Item(name: 'Разрядник', damage: ['Перегорел']),
+    // Item(name: 'Изолятор', damage: ['Трещина']),
   ];
 
   int selectedIndex = 0;
@@ -211,6 +214,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                         child: InkWell(
                           onTap: () {
                             setState(() {
+                              print(users[index].isSelected);
                               if (users[index].isSelected == 0)
                                 users[index].isSelected = 1;
                               else
@@ -290,7 +294,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
       case 2:
         return Column(
           children: [
-            for (int index = 0; index < users.length; index++)
+            for (int index = 0; index < damages.length; index++)
               FadeAnimation(0 + 0.1 * index, Container(
                 margin: EdgeInsets.symmetric(
                   horizontal: kDefaultPadding,
@@ -301,10 +305,10 @@ class _DetailsScreenState extends State<DetailsScreen> {
                 child: InkWell(
                   onTap: () {
                     setState(() {
-                      if (users[index].isSelected == 0)
-                        users[index].isSelected = 1;
+                      if (damages[index].isSelected == 0)
+                        damages[index].isSelected = 1;
                       else
-                        users[index].isSelected = 0;
+                        damages[index].isSelected = 0;
                     });
                     // pageController.animateToPage(1,
                     //     duration: Duration(milliseconds: 250),
@@ -318,7 +322,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                         height: 136,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(22),
-                          color: kPrimaryColor,
+                          color: damages[index].isSelected == 1 ? kSecondaryColor : kBlueColor,
                           boxShadow: [kDefaultShadow],
                         ),
                         child: Container(
@@ -346,7 +350,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: kDefaultPadding),
                                 child: Text(
-                                  users[index].damage[0],
+                                  damages[index].damage[0],
                                   style: Theme.of(context).textTheme.button,
                                 ),
                               ),
