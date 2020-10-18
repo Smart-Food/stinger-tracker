@@ -171,7 +171,7 @@ class MasterDropdownScreenState extends State<MasterDropdownScreen> {
                   Padding(
                       padding: const EdgeInsets.only(left: 40.0, right: 40.0),
                       child: FlatButton(
-                        minWidth: 300,
+                        //minWidth: 300,
                         onPressed: () => uploadTask(_area.text, false, 'Палыч'),
                         color: Colors.blue[600],
                         shape: RoundedRectangleBorder(
