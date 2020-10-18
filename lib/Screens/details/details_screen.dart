@@ -272,8 +272,8 @@ class _DetailsScreenState extends State<DetailsScreen> {
     );
   }
 
-  _body(int selectedIndex) {
-    Size size = MediaQuery.of(context).size;
+  Size size = MediaQuery.of(context).size;
+    DateTime now = DateTime.now();
     switch (selectedIndex) {
       case 0:
         return Column(
@@ -289,7 +289,9 @@ class _DetailsScreenState extends State<DetailsScreen> {
                   ),
                 )
             ),
-            FadeAnimation(0.4, Text(widget.description))
+            FadeAnimation(0.4, Text(widget.description)),
+            FadeAnimation(0.4, Text('${now.day}.${now.month} ${now.hour}:${now.minute}')),
+          ],
           ],
         );
         break;
