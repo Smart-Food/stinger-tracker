@@ -45,7 +45,7 @@ class MasterDropdownScreenState extends State<MasterDropdownScreen> {
         body: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Padding(padding: EdgeInsets.only(right: 300, bottom: 100),
+              Padding(padding: EdgeInsets.only(right: 300, bottom: 80),
                   child: Text(
                     'Заявка',
                     style: TextStyle(
@@ -164,7 +164,7 @@ class MasterDropdownScreenState extends State<MasterDropdownScreen> {
                     backgroundColor: Color(0xFFFF9485),
                     child: IconButton(
                       icon: Icon(Icons.location_on),
-                      color: Colors.white,
+                      color: Colors.white, onPressed: () {},
                     ),
                   ),
                   SizedBox(height: 30),

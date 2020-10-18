@@ -72,7 +72,10 @@ class _SpeechRecognitionPageState extends State<SpeechRecognitionPage> {
                       child: Container(
                           padding: const EdgeInsets.all(8.0),
                           color: Colors.grey.shade200,
-                          child: Text(transcription))),
+                          child: Text(transcription,
+                          style: TextStyle(
+                            fontSize: 18
+                          ),))),
                   _buildButton(
                     onPressed: _speechRecognitionAvailable && !_isListening
                         ? () => start()
@@ -100,7 +103,12 @@ class _SpeechRecognitionPageState extends State<SpeechRecognitionPage> {
       .map((l) => CheckedPopupMenuItem<Language>(
     value: l,
     checked: selectedLang == l,
-    child: new Text(l.name),
+    child: Text(
+        l.name,
+      style: TextStyle(
+        fontSize: 18
+      ),
+    ),
   ))
       .toList();
 
@@ -115,7 +123,10 @@ class _SpeechRecognitionPageState extends State<SpeechRecognitionPage> {
         onPressed: onPressed,
         child: Text(
           label,
-          style: const TextStyle(color: Colors.white),
+          style: const TextStyle(
+              color: Colors.white,
+            fontSize: 18
+          ),
         ),
       ));
 

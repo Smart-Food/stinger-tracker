@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:stinger_tracker/Screens/loginsignup/sun.dart';
 import 'package:stinger_tracker/constants.dart';
 import 'package:stinger_tracker/components/search_box.dart';
 import 'package:stinger_tracker/fade_animation.dart';
-import 'package:stinger_tracker/models/product.dart';
 import '../../csv_operations.dart';
 import 'product_card.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -71,6 +69,7 @@ class _HomeScreenScreenState extends State<HomeScreen> {
                         Text(
                             'Добро пожаловать, ${widget.myName}',
                             style: TextStyle(
+                              fontSize: 18,
                                 color: Colors.white
                             )
                         ),
@@ -156,7 +155,7 @@ class _HomeScreenScreenState extends State<HomeScreen> {
         return StreamBuilder(
             stream: FirebaseFirestore.instance.collection("slaves").doc(widget.myName).collection("tasks").snapshots(),
             builder: (context, snapshot) {
-              if (!snapshot.hasData) return Text("Загружаем...");
+              if (!snapshot.hasData) return CircularProgressIndicator();
               return ListView.builder(
                 itemCount: snapshot.data.documents.length,
                 itemBuilder: (context, index) => FadeAnimation(0 + 0.1 * index,
