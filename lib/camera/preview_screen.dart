@@ -12,8 +12,9 @@ import 'package:stinger_tracker/form.dart';
 import 'package:stinger_tracker/csv_operations.dart';
 class PreviewScreen extends StatefulWidget{
   final String imgPath;
+  final String address;
 
-  PreviewScreen({this.imgPath});
+  PreviewScreen({this.imgPath, this.address});
 
   @override
   _PreviewScreenState createState() => _PreviewScreenState();
@@ -40,7 +41,9 @@ class _PreviewScreenState extends State<PreviewScreen>{
                 width: double.infinity,
                 height: 60.0,
                 color: Colors.black,
-                child: Center(
+                child: GestureDetector(
+                  onTap: () => uploadTask(widget.address, true, 'Палыч'),
+                  child: Center(
                   child: IconButton(
                     icon: Icon(Icons.share,color: Colors.white,),
                     onPressed: (){
@@ -50,7 +53,7 @@ class _PreviewScreenState extends State<PreviewScreen>{
                       });
                     },
                   ),
-                ),
+                ),)
               ),
             )
           ],

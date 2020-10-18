@@ -31,7 +31,7 @@ class _CameraScreenState extends State {
         print('No camera available');
       }
     }).catchError((err) {
-      print('Error :${err.code}Error message : ${err.message}');
+      print('Error :${err.code} : ${err.message}');
     });
   }
 
@@ -199,6 +199,7 @@ class _CameraScreenState extends State {
         context,
         MaterialPageRoute(
             builder: (context) => PreviewScreen(
+              address: 'default',
               imgPath: path,
             )),
       );
