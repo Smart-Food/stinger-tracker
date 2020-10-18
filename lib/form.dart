@@ -39,7 +39,7 @@ class DropdownScreenState extends State<DropdownScreen> {
     PageController pageController = PageController(initialPage: 0);
     Size size = MediaQuery.of(context).size;
     //Окно с вызовом скорой
-  Widget showAlertDialog(BuildContext context) {
+ /* Widget showAlertDialog(BuildContext context) {
       Widget cancelButton = FlatButton(
         child: Text("Отмена"),
         onPressed:  () {Navigator.of(context).pop();},
@@ -73,7 +73,7 @@ class DropdownScreenState extends State<DropdownScreen> {
         );
       }
       startTimer();
-//
+*///
       return Scaffold(
         body: PageView(
           controller: pageController,
