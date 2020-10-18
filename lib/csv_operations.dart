@@ -1,10 +1,9 @@
 import 'dart:async';
 import 'dart:io';
-import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 class Storage {
-  String file_name;
-  Storage(this.file_name);
+  String fileName;
+  Storage(this.fileName);
   Future<String> get localPath async {
     final dir = await getApplicationDocumentsDirectory();
     return dir.path;
@@ -12,7 +11,7 @@ class Storage {
 
   Future<File> get localFile async {
     final path = await localPath;
-    return File('$path/$file_name');
+    return File('$path/$fileName');
   }
 
   Future<String> readData() async {

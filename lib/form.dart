@@ -27,6 +27,12 @@ class DropdownScreen extends StatefulWidget {
 
 class DropdownScreenState extends State<DropdownScreen> {
   File imageFile;
+
+  List<Item> damages = <Item>[
+    Item(damage: ['Поломка рукоятки включения']),
+    Item(damage: ['Сломанные ножи разъединителя']),
+  ];
+
   List<Item> users = <Item>[
     Item(name: 'Линейный разъединитель', damage: ['Поломка рукоятки включения']),
     Item(name: 'Отпаячный разъединитель', damage: ['Сломанные ножи разъединителя']),
@@ -170,7 +176,7 @@ class DropdownScreenState extends State<DropdownScreen> {
                 )
           ),
             ListView.builder(
-                itemCount: users.length,
+                itemCount: damages.length,
                 itemBuilder: (context, index) => FadeAnimation(0 + 0.1 * index,
                     Container(
                       margin: EdgeInsets.symmetric(
@@ -182,10 +188,10 @@ class DropdownScreenState extends State<DropdownScreen> {
                       child: InkWell(
                         onTap: () {
                           setState(() {
-                            if (users[index].isSelected == 0)
-                              users[index].isSelected = 1;
+                            if (damages[index].isSelected == 0)
+                              damages[index].isSelected = 1;
                             else
-                              users[index].isSelected = 0;
+                              damages[index].isSelected = 0;
                           });
                           // pageController.animateToPage(1,
                           //     duration: Duration(milliseconds: 250),
@@ -199,7 +205,7 @@ class DropdownScreenState extends State<DropdownScreen> {
                               height: 136,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(22),
-                                color: users[index].isSelected == 1 ? kBlueColor : kSecondaryColor,
+                                color: damages[index].isSelected == 1 ? kBlueColor : kSecondaryColor,
                                 boxShadow: [kDefaultShadow],
                               ),
                               child: Container(
@@ -227,7 +233,7 @@ class DropdownScreenState extends State<DropdownScreen> {
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: kDefaultPadding),
                                       child: Text(
-                                        users[index].damage[0],
+                                        damages[index].damage[0],
                                         style: TextStyle(
                                             fontSize: 17
                                         ),
