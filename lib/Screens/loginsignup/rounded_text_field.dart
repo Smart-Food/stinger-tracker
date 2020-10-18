@@ -23,7 +23,9 @@ class RoundedTextField extends StatelessWidget {
       children: [
         Text(
           hintText,
-          style: TextStyle(color: Colors.white60),
+          style: TextStyle(
+              color: Colors.white60,
+          fontSize: 18),
         ),
         VerticalSpacing(of: 10),
         Container(

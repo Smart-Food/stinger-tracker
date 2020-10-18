@@ -180,6 +180,7 @@ class MasterDropdownScreenState extends State<MasterDropdownScreen> {
                         child: Center(
                           child: Text("Создать",
                             style: TextStyle(
+                              fontSize: 18,
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold
                             ),),

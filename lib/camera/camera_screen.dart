@@ -163,7 +163,8 @@ class _CameraScreenState extends State {
             '${lensDirection.toString().substring(lensDirection.toString().indexOf('.') + 1).toUpperCase()}',
             style: TextStyle(
                 color: Colors.white,
-                fontWeight: FontWeight.w500
+                fontWeight: FontWeight.w500,
+              fontSize: 18
             ),),
         ),
       ),

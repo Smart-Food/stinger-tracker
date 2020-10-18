@@ -40,6 +40,19 @@ class DropdownScreenState extends State<DropdownScreen> {
     Item(name: 'Разрядник', damage: ['Перегорел']),
     Item(name: 'Изолятор', damage: ['Трещина']),
   ];
+
+  @override
+  void initState() {
+    super.initState();
+      setState(() {
+        for (var item in users) {
+            item.isSelected = 0;
+        for (var item in damages) {
+          item.isSelected = 0;
+        }
+      }});
+    }
+
   @override
   Widget build(BuildContext context) {
     PageController pageController = PageController(initialPage: 0);
@@ -145,7 +158,7 @@ class DropdownScreenState extends State<DropdownScreen> {
                                       child: Text(
                                           users[index].name,
                                         style: TextStyle(
-                                          fontSize: 17
+                                          fontSize: 18
                                         ),
                                         //style: Theme.of(context).textTheme.button,
                                       ),
@@ -235,7 +248,7 @@ class DropdownScreenState extends State<DropdownScreen> {
                                       child: Text(
                                         damages[index].damage[0],
                                         style: TextStyle(
-                                            fontSize: 17
+                                            fontSize: 18
                                         ),
                                       ),
                                     ),
@@ -265,7 +278,10 @@ class DropdownScreenState extends State<DropdownScreen> {
                 )
             ),
             FlatButton(
-                child: Text('Сохранить данные и сделать снимок'),
+                child: Text('Сохранить данные и сделать снимок',
+                style: TextStyle(
+                  fontSize: 18
+                )),
                 onPressed: () {
                   List<List> inspection = [
                     [users[0].name, users[0].damage[0]]

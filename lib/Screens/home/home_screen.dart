@@ -105,7 +105,10 @@ class _HomeScreenScreenState extends State<HomeScreen> {
                                 ),
                                 child: Text(
                                   categories[index],
-                                  style: TextStyle(color: Colors.white),
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                    fontSize: 18
+                                  ),
                                 ),
                               ),
                             ),

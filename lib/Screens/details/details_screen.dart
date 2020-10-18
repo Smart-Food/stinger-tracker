@@ -12,7 +12,7 @@ class Item {
   DateTime startDate, endDate;
   Icon icon;
   List<String> damage;
-  int isSelected = 0;
+  int isSelected;
   Item({this.name,this.icon, this.damage, this.object, this.startDate, this.endDate, this.isSelected});
 }
 
@@ -50,6 +50,18 @@ class _DetailsScreenState extends State<DetailsScreen> {
   ];
 
   int selectedIndex = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    setState(() {
+      for (var item in users) {
+        item.isSelected = 0;
+        for (var item in damages) {
+          item.isSelected = 0;
+        }
+      }});
+  }
 
   @override
   Widget build(BuildContext context) {

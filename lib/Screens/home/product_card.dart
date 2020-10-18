@@ -83,7 +83,7 @@ class ProductCard extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           horizontal: kDefaultPadding),
                       child: Text(
-                        isCheck ? "Проверка оборудования" : "Обнаружение дефектов",
+                        isCheck ? "Плановая проверка" : "Обнаружение дефектов",
                         style: Theme.of(context).textTheme.button,
                       ),
                     ),

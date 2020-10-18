@@ -53,7 +53,10 @@ class _SpeechRecognitionPageState extends State<SpeechRecognitionPage> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Тест'),
+          title: Text('Тест',
+            style: TextStyle(
+              fontSize: 18
+            ),),
           actions: [
             PopupMenuButton<Language>(
               onSelected: _selectLangHandler,
