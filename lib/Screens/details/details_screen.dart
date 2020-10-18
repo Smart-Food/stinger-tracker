@@ -82,140 +82,410 @@ class _DetailsScreenState extends State<DetailsScreen> {
             Scaffold(
                 backgroundColor: kPrimaryColor,
                 appBar: buildAppBar(context),
-                body: SafeArea(
-                  bottom: false,
-                  child: SingleChildScrollView(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Container(
-                          width: double.infinity,
-                          padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
-                          decoration: BoxDecoration(
-                            color: kBackgroundColor,
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(50),
-                              bottomRight: Radius.circular(50),
+                body: PageView(children: [
+                  SafeArea(
+                    bottom: false,
+                    child: SingleChildScrollView(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Container(
+                            width: double.infinity,
+                            padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                            decoration: BoxDecoration(
+                              color: kBackgroundColor,
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(50),
+                                bottomRight: Radius.circular(50),
+                              ),
                             ),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              _body(singleton.selectedIndexDetails),
-                              Padding(
-                                padding: const EdgeInsets.symmetric(vertical: kDefaultPadding),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: <Widget>[
-                                    GestureDetector(
-                                      onTap: () {
-                                        setState(() {
-                                          singleton.selectedIndexDetails = 0;
-                                        });
-                                      },
-                                      child: ColorDot(
-                                        fillColor: Color(0xFF80989A),
-                                        isSelected: singleton.selectedIndexDetails == 0 ? true : false,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                _body(singleton.selectedIndexDetails = 0),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(vertical: kDefaultPadding),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: <Widget>[
+                                      GestureDetector(
+                                        onTap: () {
+                                          setState(() {
+                                            singleton.selectedIndexDetails = 0;
+                                          });
+                                        },
+                                        child: ColorDot(
+                                          fillColor: Color(0xFF80989A),
+                                          isSelected: singleton.selectedIndexDetails == 0 ? true : false,
+                                        ),
                                       ),
-                                    ),
-                                    GestureDetector(
-                                      onTap: () {
-                                        setState(() {
-                                          singleton.selectedIndexDetails = 1;
-                                        });
-                                      },
-                                      child: ColorDot(
-                                        fillColor: Color(0xFFFF5200),
-                                        isSelected: singleton.selectedIndexDetails == 1 ? true : false,
+                                      GestureDetector(
+                                        onTap: () {
+                                          setState(() {
+                                            singleton.selectedIndexDetails = 1;
+                                          });
+                                        },
+                                        child: ColorDot(
+                                          fillColor: Color(0xFFFF5200),
+                                          isSelected: singleton.selectedIndexDetails == 1 ? true : false,
+                                        ),
                                       ),
-                                    ),
-                                    GestureDetector(
-                                      onTap: () {
-                                        setState(() {
-                                          singleton.selectedIndexDetails = 2;
-                                        });
-                                      },
-                                      child: ColorDot(
-                                        fillColor: kPrimaryColor,
-                                        isSelected: singleton.selectedIndexDetails == 2 ? true : false,
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    vertical: kDefaultPadding / 2),
-                                // child: Text(
-                                //   product.title,
-                                //   style: Theme.of(context).textTheme.headline6,
-                                // ),
-                              ),
-                              Text(
-                                widget.masterName,
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600,
-                                  color: kSecondaryColor,
-                                ),
-                              ),
-                              Padding(
-                                padding:
-                                EdgeInsets.symmetric(vertical: kDefaultPadding / 2),
-                                // child: Text(
-                                //   product.description,
-                                //   style: TextStyle(color: kTextLightColor),
-                                // ),
-                              ),
-                              SizedBox(height: kDefaultPadding),
-                            ],
-                          ),
-                        ),
-                    Container(
-                        margin: EdgeInsets.all(kDefaultPadding),
-                        padding: EdgeInsets.symmetric(
-                          horizontal: kDefaultPadding,
-                          vertical: kDefaultPadding / 2,
-                        ),
-                        decoration: BoxDecoration(
-                          color: Color(0xFFFCBF1E),
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                        child: Column(children: [
-                          Row(
-                            children: <Widget>[
-                              SvgPicture.asset(
-                                "assets/icons/chat.svg",
-                                height: 18,
-                              ),
-                              Spacer(),
-                              FlatButton.icon(
-                                onPressed: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute  (builder: (context) => CameraScreen())
-                                  );
-                                },
-                                icon: SvgPicture.asset(
-                                  "assets/icons/shopping-bag.svg",
-                                  height: 18,
-                                ),
-                                label: Text(
-                                  "Прикрепить фото",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 18
+                                      GestureDetector(
+                                        onTap: () {
+                                          setState(() {
+                                            singleton.selectedIndexDetails = 2;
+                                          });
+                                        },
+                                        child: ColorDot(
+                                          fillColor: kPrimaryColor,
+                                          isSelected: singleton.selectedIndexDetails == 2 ? true : false,
+                                        ),
+                                      )
+                                    ],
                                   ),
                                 ),
-                              ),
-                            ],
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: kDefaultPadding / 2),
+                                  // child: Text(
+                                  //   product.title,
+                                  //   style: Theme.of(context).textTheme.headline6,
+                                  // ),
+                                ),
+                                Text(
+                                  widget.masterName,
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600,
+                                    color: kSecondaryColor,
+                                  ),
+                                ),
+                                Padding(
+                                  padding:
+                                  EdgeInsets.symmetric(vertical: kDefaultPadding / 2),
+                                  // child: Text(
+                                  //   product.description,
+                                  //   style: TextStyle(color: kTextLightColor),
+                                  // ),
+                                ),
+                                SizedBox(height: kDefaultPadding),
+                              ],
+                            ),
                           ),
-                        ],)
-                    )
-                      ],
+                          Container(
+                              margin: EdgeInsets.all(kDefaultPadding),
+                              padding: EdgeInsets.symmetric(
+                                horizontal: kDefaultPadding,
+                                vertical: kDefaultPadding / 2,
+                              ),
+                              decoration: BoxDecoration(
+                                color: Color(0xFFFCBF1E),
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              child: Column(children: [
+                                Row(
+                                  children: <Widget>[
+                                    SvgPicture.asset(
+                                      "assets/icons/chat.svg",
+                                      height: 18,
+                                    ),
+                                    Spacer(),
+                                    FlatButton.icon(
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute  (builder: (context) => CameraScreen())
+                                        );
+                                      },
+                                      icon: SvgPicture.asset(
+                                        "assets/icons/shopping-bag.svg",
+                                        height: 18,
+                                      ),
+                                      label: Text(
+                                        "Прикрепить фото",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 18
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],)
+                          )
+                        ],
+                      ),
                     ),
                   ),
-                )
+                  SafeArea(
+                    bottom: false,
+                    child: SingleChildScrollView(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Container(
+                            width: double.infinity,
+                            padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                            decoration: BoxDecoration(
+                              color: kBackgroundColor,
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(50),
+                                bottomRight: Radius.circular(50),
+                              ),
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                _body(singleton.selectedIndexDetails = 1),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(vertical: kDefaultPadding),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: <Widget>[
+                                      GestureDetector(
+                                        onTap: () {
+                                          setState(() {
+                                            singleton.selectedIndexDetails = 0;
+                                          });
+                                        },
+                                        child: ColorDot(
+                                          fillColor: Color(0xFF80989A),
+                                          isSelected: singleton.selectedIndexDetails == 0 ? true : false,
+                                        ),
+                                      ),
+                                      GestureDetector(
+                                        onTap: () {
+                                          setState(() {
+                                            singleton.selectedIndexDetails = 1;
+                                          });
+                                        },
+                                        child: ColorDot(
+                                          fillColor: Color(0xFFFF5200),
+                                          isSelected: singleton.selectedIndexDetails == 1 ? true : false,
+                                        ),
+                                      ),
+                                      GestureDetector(
+                                        onTap: () {
+                                          setState(() {
+                                            singleton.selectedIndexDetails = 2;
+                                          });
+                                        },
+                                        child: ColorDot(
+                                          fillColor: kPrimaryColor,
+                                          isSelected: singleton.selectedIndexDetails == 2 ? true : false,
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: kDefaultPadding / 2),
+                                  // child: Text(
+                                  //   product.title,
+                                  //   style: Theme.of(context).textTheme.headline6,
+                                  // ),
+                                ),
+                                Text(
+                                  widget.masterName,
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600,
+                                    color: kSecondaryColor,
+                                  ),
+                                ),
+                                Padding(
+                                  padding:
+                                  EdgeInsets.symmetric(vertical: kDefaultPadding / 2),
+                                  // child: Text(
+                                  //   product.description,
+                                  //   style: TextStyle(color: kTextLightColor),
+                                  // ),
+                                ),
+                                SizedBox(height: kDefaultPadding),
+                              ],
+                            ),
+                          ),
+                          Container(
+                              margin: EdgeInsets.all(kDefaultPadding),
+                              padding: EdgeInsets.symmetric(
+                                horizontal: kDefaultPadding,
+                                vertical: kDefaultPadding / 2,
+                              ),
+                              decoration: BoxDecoration(
+                                color: Color(0xFFFCBF1E),
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              child: Column(children: [
+                                Row(
+                                  children: <Widget>[
+                                    SvgPicture.asset(
+                                      "assets/icons/chat.svg",
+                                      height: 18,
+                                    ),
+                                    Spacer(),
+                                    FlatButton.icon(
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute  (builder: (context) => CameraScreen())
+                                        );
+                                      },
+                                      icon: SvgPicture.asset(
+                                        "assets/icons/shopping-bag.svg",
+                                        height: 18,
+                                      ),
+                                      label: Text(
+                                        "Прикрепить фото",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 18
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],)
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  SafeArea(
+                    bottom: false,
+                    child: SingleChildScrollView(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Container(
+                            width: double.infinity,
+                            padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                            decoration: BoxDecoration(
+                              color: kBackgroundColor,
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(50),
+                                bottomRight: Radius.circular(50),
+                              ),
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                _body(singleton.selectedIndexDetails = 2),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(vertical: kDefaultPadding),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: <Widget>[
+                                      GestureDetector(
+                                        onTap: () {
+                                          setState(() {
+                                            singleton.selectedIndexDetails = 0;
+                                          });
+                                        },
+                                        child: ColorDot(
+                                          fillColor: Color(0xFF80989A),
+                                          isSelected: singleton.selectedIndexDetails == 0 ? true : false,
+                                        ),
+                                      ),
+                                      GestureDetector(
+                                        onTap: () {
+                                          setState(() {
+                                            singleton.selectedIndexDetails = 1;
+                                          });
+                                        },
+                                        child: ColorDot(
+                                          fillColor: Color(0xFFFF5200),
+                                          isSelected: singleton.selectedIndexDetails == 1 ? true : false,
+                                        ),
+                                      ),
+                                      GestureDetector(
+                                        onTap: () {
+                                          setState(() {
+                                            singleton.selectedIndexDetails = 2;
+                                          });
+                                        },
+                                        child: ColorDot(
+                                          fillColor: kPrimaryColor,
+                                          isSelected: singleton.selectedIndexDetails == 2 ? true : false,
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: kDefaultPadding / 2),
+                                  // child: Text(
+                                  //   product.title,
+                                  //   style: Theme.of(context).textTheme.headline6,
+                                  // ),
+                                ),
+                                Text(
+                                  widget.masterName,
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600,
+                                    color: kSecondaryColor,
+                                  ),
+                                ),
+                                Padding(
+                                  padding:
+                                  EdgeInsets.symmetric(vertical: kDefaultPadding / 2),
+                                  // child: Text(
+                                  //   product.description,
+                                  //   style: TextStyle(color: kTextLightColor),
+                                  // ),
+                                ),
+                                SizedBox(height: kDefaultPadding),
+                              ],
+                            ),
+                          ),
+                          Container(
+                              margin: EdgeInsets.all(kDefaultPadding),
+                              padding: EdgeInsets.symmetric(
+                                horizontal: kDefaultPadding,
+                                vertical: kDefaultPadding / 2,
+                              ),
+                              decoration: BoxDecoration(
+                                color: Color(0xFFFCBF1E),
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              child: Column(children: [
+                                Row(
+                                  children: <Widget>[
+                                    SvgPicture.asset(
+                                      "assets/icons/chat.svg",
+                                      height: 18,
+                                    ),
+                                    Spacer(),
+                                    FlatButton.icon(
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute  (builder: (context) => CameraScreen())
+                                        );
+                                      },
+                                      icon: SvgPicture.asset(
+                                        "assets/icons/shopping-bag.svg",
+                                        height: 18,
+                                      ),
+                                      label: Text(
+                                        "Прикрепить фото",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 18
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],)
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ])
             ),
             Positioned(
               bottom: 0,
@@ -272,7 +542,8 @@ class _DetailsScreenState extends State<DetailsScreen> {
     );
   }
 
-  Size size = MediaQuery.of(context).size;
+  _body(int selectedIndex) {
+    Size size = MediaQuery.of(context).size;
     DateTime now = DateTime.now();
     switch (selectedIndex) {
       case 0:
@@ -291,7 +562,6 @@ class _DetailsScreenState extends State<DetailsScreen> {
             ),
             FadeAnimation(0.4, Text(widget.description)),
             FadeAnimation(0.4, Text('${now.day}.${now.month} ${now.hour}:${now.minute}')),
-          ],
           ],
         );
         break;
