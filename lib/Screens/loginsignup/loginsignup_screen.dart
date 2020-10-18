@@ -11,9 +11,7 @@ import 'tabs.dart';
 import 'rounded_button.dart';
 
 import 'package:stinger_tracker/fade_animation.dart';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
-
 import 'package:stinger_tracker/backend/user_global.dart';
 import 'package:stinger_tracker/backend/user_local.dart';
 

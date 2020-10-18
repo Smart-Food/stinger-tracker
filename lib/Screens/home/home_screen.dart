@@ -235,7 +235,34 @@ class _HomeScreenScreenState extends State<HomeScreen> {
         return Container();
         break;
       case 2:
-        return Container();
+        return StreamBuilder(
+            stream: FirebaseFirestore.instance.collection("slaves").doc(widget.myName).collection("tasks_done").snapshots(),
+            builder: (context, snapshot) {
+              if (!snapshot.hasData) return CircularProgressIndicator();
+              return ListView.builder(
+                  itemCount: snapshot.data.documents.length,
+                  itemBuilder: (context, index) => FadeAnimation(0 + 0.1 * index,
+                      ProductCard(
+                        masterName: snapshot.data.documents[index].data()["masterName"],
+                        isCheck: snapshot.data.documents[index].data()["isCheck"],
+                        address: snapshot.data.documents[index].data()["address"],
+                        itemIndex: index,
+                        onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DetailsScreen(
+                              masterName: snapshot.data.documents[index].data()["masterName"],
+                              isCheck: snapshot.data.documents[index].data()["isCheck"],
+                              address: snapshot.data.documents[index].data()["address"],
+                              description: snapshot.data.documents[index].data()["description"],
+                            ),
+                          ),
+                        ),
+                      )
+                  )
+              );
+            }
+        );
         break;
       case 3:
         return Container();

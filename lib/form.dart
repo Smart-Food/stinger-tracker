@@ -300,7 +300,6 @@ class DropdownScreenState extends State<DropdownScreen> {
                 })
           ],
         )
-
       );
   }
 }
