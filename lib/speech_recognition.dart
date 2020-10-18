@@ -42,7 +42,7 @@ class _SpeechRecognitionPageState extends State<SpeechRecognitionPage> {
     _speech.setCurrentLocaleHandler(onCurrentLocale);
     _speech.setRecognitionStartedHandler(onRecognitionStarted);
     _speech.setRecognitionResultHandler(onRecognitionResult);
-    _speech.setRecognitionCompleteHandler(onRecognitionComplete);
+    // _speech.setRecognitionCompleteHandler(onRecognitionComplete);
     _speech
         .activate()
         .then((res) => setState(() => _speechRecognitionAvailable = res));

@@ -197,7 +197,7 @@ class MasterDropdownScreenState extends State<MasterDropdownScreen> {
         .collection('slaves').doc('Dyk').collection('tasks').add({
       'address': address,
       'isCheck': isCheck,
-      'masterName': masterName
+      'masterName': masterName,
     }) as CollectionReference;
   }
 }
