@@ -64,9 +64,13 @@ class _HomeScreenScreenState extends State<HomeScreen> {
     return Consumer<Singleton>(
         builder: (context, singleton, child)
     {
-      if (singleton.isNavigating) {
-        notificationFlushBar();
-        singleton.isNavigating = false;
+      if (singleton.isNavigatingOpen) {
+        navigateToOpen();
+        singleton.isNavigatingOpen = false;
+      }
+      if (singleton.isNavigatingCreate) {
+        navigateToCreate();
+        singleton.isNavigatingCreate = false;
       }
       return Consumer<Navigate>(builder: (context, flushBar, child) {
         return Stack(
@@ -245,7 +249,7 @@ class _HomeScreenScreenState extends State<HomeScreen> {
     }
   }
 
-  void notificationFlushBar() {
+  void navigateToOpen() {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       FirebaseFirestore.instance.collection("slaves").doc(widget.myName).collection("tasks").get().then((tasks) {
         if (tasks.docs[0] != null)
@@ -261,6 +265,18 @@ class _HomeScreenScreenState extends State<HomeScreen> {
             ),
           );
       });
+    });
+  }
+
+  void navigateToCreate() {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) =>
+        widget.isDayMood
+            ? DropdownScreen(Storage('list.csv'))
+            : MasterDropdownScreen(Storage('tasks.csv'))),
+      );
     });
   }
 }

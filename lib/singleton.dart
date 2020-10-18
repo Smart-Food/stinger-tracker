@@ -26,11 +26,20 @@ class Singleton extends ChangeNotifier {
 
   bool isNavigating = false;
   bool isPop = false;
+  bool isNavigatingCreate = false;
+  bool isNavigatingOpen = false;
   bool isNavigatingToCamera = false;
+
+  PageController pageController = PageController();
 
   String transcription = '';
 
   String last = "";
+
+  final TextEditingController heading =  TextEditingController();
+  final TextEditingController area =  TextEditingController();
+  final TextEditingController topic =  TextEditingController();
+  final TextEditingController description =  TextEditingController();
 
   //String _currentLocale = 'en_US';
   Language selectedLang = languages.first;
@@ -126,27 +135,44 @@ class Singleton extends ChangeNotifier {
           this.transcription = "";
           notifyListeners();
         }
-        if (last == "Форма" || last == "форма") {
-          this.isNavigating = true;
+        if (last == "Создать" || last == "создать") {
+          this.isNavigatingCreate = true;
+          this.transcription = "";
+          notifyListeners();
+        }
+        if (last == "Открыть" || last == "открыть") {
+          this.isNavigatingOpen = true;
           this.transcription = "";
           notifyListeners();
         }
         if (last == "Описание" || last == "описание") {
+          this.pageController.jumpToPage(0);
           this.selectedIndexDetails = 0;
           this.transcription = "";
           notifyListeners();
         }
         if (last == "Заявки" || last == "заявки") {
+          this.pageController.jumpToPage(1);
           this.selectedIndexDetails = 1;
           this.transcription = "";
           notifyListeners();
         }
         if (last == "Дефекты" || last == "дефекты") {
+          this.pageController.jumpToPage(2);
           this.selectedIndexDetails = 2;
           this.transcription = "";
           notifyListeners();
         }
         if (last == "Камера" || last == "камера") {
+          this.isNavigatingToCamera = true;
+          this.transcription = "";
+          notifyListeners();
+        }
+        if (last == "Автозаявка" || last == "автозаявка") {
+          this.heading.text = "Dyk";
+          this.area.text = "г. Яросавль";
+          this.topic.text = "Обнаружение дефектов";
+          this.description.text = "Отсутствие отклика от объекта";
           this.isNavigatingToCamera = true;
           this.transcription = "";
           notifyListeners();

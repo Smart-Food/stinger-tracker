@@ -82,7 +82,9 @@ class _DetailsScreenState extends State<DetailsScreen> {
             Scaffold(
                 backgroundColor: kPrimaryColor,
                 appBar: buildAppBar(context),
-                body: PageView(children: [
+                body: PageView(
+                  controller: singleton.pageController,
+                    children: [
                   SafeArea(
                     bottom: false,
                     child: SingleChildScrollView(
@@ -111,6 +113,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                       GestureDetector(
                                         onTap: () {
                                           setState(() {
+                                            singleton.pageController.jumpToPage(0);
                                             singleton.selectedIndexDetails = 0;
                                           });
                                         },
@@ -122,6 +125,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                       GestureDetector(
                                         onTap: () {
                                           setState(() {
+                                            singleton.pageController.jumpToPage(1);
                                             singleton.selectedIndexDetails = 1;
                                           });
                                         },
@@ -133,6 +137,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                       GestureDetector(
                                         onTap: () {
                                           setState(() {
+                                            singleton.pageController.jumpToPage(2);
                                             singleton.selectedIndexDetails = 2;
                                           });
                                         },

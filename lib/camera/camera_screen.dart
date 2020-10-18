@@ -101,7 +101,7 @@ class _CameraScreenState extends State {
   Widget _cameraPreviewWidget() {
     if (controller == null || !controller.value.isInitialized) {
       return const Text(
-        'Loading',
+        'Загрузка',
         style: TextStyle(
           color: Colors.white,
           fontSize: 20.0,
